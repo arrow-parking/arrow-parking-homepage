@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="消火器株式会社の駐車場一覧。エリア別に検索できます。">
+    <title>駐車場一覧 | 消火器株式会社</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🅿️</span>
+                <span class="logo-text">消火器株式会社</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="parkings.html" class="active">駐車場を探す</a></li>
+                <li><a href="company.html">会社概要</a></li>
+                <li><a href="landowner.html">土地活用</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>🅿️ 駐車場一覧</h1>
+            <p class="subtitle">お探しの駐車場を見つけましょう</p>
+        </div>
+    </div>
+
+    <main class="container page-content">
+        <div class="area-buttons" id="areaButtons">
+            <button class="area-button active" data-prefecture="">全て</button>
+            <button class="area-button" data-prefecture="東京都">東京</button>
+            <button class="area-button" data-prefecture="宮城県">宮城</button>
+            <button class="area-button" data-prefecture="大阪府">大阪</button>
+            <button class="area-button" data-prefecture="兵庫県">兵庫</button>
+        </div>
+
+        <div id="resultCount" style="text-align: center; margin: 2rem 0; font-size: 1.2rem; color: #667eea; font-weight: bold;"></div>
+
+        <div class="parking-grid" id="parkingGrid"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-contact">
+                <h3>ご相談・お問い合わせ窓口</h3>
+                <p class="phone-number">
+                    <a href="tel:03-1234-5678">03-1234-5678</a>
+                </p>
+                <p class="business-hours">営業時間：平日 9:00〜18:00</p>
+                <a href="mailto:info@shoukaki-parking.co.jp" class="btn-contact">
+                    メールでのお問い合わせ
+                </a>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>メニュー</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="parkings.html">駐車場を探す</a></li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="landowner.html">土地活用</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>株式会社消火器</h4>
+                    <p>〒100-0001<br>東京都千代田区千代田1-1-1</p>
+                    <p>TEL: <a href="tel:03-1234-5678">03-1234-5678</a></p>
+                    <p>FAX: 03-1234-5679</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 消火器株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer> 
+    <script src="js/config.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/parkings.js"></script>
+</body>
+</html>

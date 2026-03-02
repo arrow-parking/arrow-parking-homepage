@@ -1,0 +1,506 @@
+[
+  {
+    "id": 1,
+    "name": "消火器パーキング新宿西口",
+    "prefecture": "東京都",
+    "city": "新宿区",
+    "address": "新宿区西新宿1-1-1",
+    "station": "新宿駅徒歩3分",
+    "capacity": 20,
+    "price_per_hour": 400,
+    "price_per_day": 2400,
+    "latitude": 35.6895,
+    "longitude": 139.7006,
+    "features": "24時間営業,屋根付き,防犯カメラ,EV充電,大型車可",
+    "images": [
+      "images/parking-1-1.jpg",
+      "images/parking-1-2.jpg",
+      "images/parking-1-3.jpg"
+    ],
+    "description": "新宿駅徒歩3分の好立地。ビジネス・ショッピングに最適です。"
+  },
+  {
+    "id": 2,
+    "name": "消火器パーキング渋谷センター街",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "address": "渋谷区宇田川町1-1",
+    "station": "渋谷駅徒歩5分",
+    "capacity": 15,
+    "price_per_hour": 500,
+    "price_per_day": 3000,
+    "latitude": 35.6595,
+    "longitude": 139.7004,
+    "features": "24時間営業,駅近,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-2-1.jpg",
+      "images/parking-2-2.jpg"
+    ],
+    "description": "渋谷センター街すぐ。若者の街でお買い物に便利です。"
+  },
+  {
+    "id": 3,
+    "name": "消火器パーキング池袋東口",
+    "prefecture": "東京都",
+    "city": "豊島区",
+    "address": "豊島区南池袋1-1-1",
+    "station": "池袋駅徒歩5分",
+    "capacity": 30,
+    "price_per_hour": 350,
+    "price_per_day": 2100,
+    "latitude": 35.7295,
+    "longitude": 139.7109,
+    "features": "24時間営業,大型車可,屋根付き,防犯カメラ,洗車サービス",
+    "images": [
+      "images/parking-3-1.jpg",
+      "images/parking-3-2.jpg",
+      "images/parking-3-3.jpg"
+    ],
+    "description": "池袋駅東口から徒歩5分。大型車も駐車可能です。"
+  },
+  {
+    "id": 4,
+    "name": "消火器パーキング品川駅前",
+    "prefecture": "東京都",
+    "city": "品川区",
+    "address": "品川区北品川1-1-1",
+    "station": "品川駅徒歩3分",
+    "capacity": 25,
+    "price_per_hour": 450,
+    "price_per_day": 2700,
+    "latitude": 35.6284,
+    "longitude": 139.7387,
+    "features": "24時間営業,新幹線口近く,防犯カメラ,EV充電,コインロッカー",
+    "images": [
+      "images/parking-4-1.jpg",
+      "images/parking-4-2.jpg"
+    ],
+    "description": "品川駅新幹線口すぐ。ビジネス出張に最適です。"
+  },
+  {
+    "id": 5,
+    "name": "消火器パーキング上野駅前",
+    "prefecture": "東京都",
+    "city": "台東区",
+    "address": "台東区上野7-1-1",
+    "station": "上野駅徒歩2分",
+    "capacity": 18,
+    "price_per_hour": 400,
+    "price_per_day": 2400,
+    "latitude": 35.7148,
+    "longitude": 139.7772,
+    "features": "24時間営業,駅近,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-5-1.jpg",
+      "images/parking-5-2.jpg"
+    ],
+    "description": "上野駅すぐ。アメ横・上野公園へのアクセス良好。"
+  },
+  {
+    "id": 6,
+    "name": "消火器パーキング秋葉原電気街",
+    "prefecture": "東京都",
+    "city": "千代田区",
+    "address": "千代田区外神田1-1-1",
+    "station": "秋葉原駅徒歩3分",
+    "capacity": 22,
+    "price_per_hour": 400,
+    "price_per_day": 2400,
+    "latitude": 35.6983,
+    "longitude": 139.7731,
+    "features": "24時間営業,防犯カメラ,キャッシュレス決済,EV充電",
+    "images": [
+      "images/parking-6-1.jpg",
+      "images/parking-6-2.jpg"
+    ],
+    "description": "秋葉原電気街の中心。買い物に便利です。"
+  },
+  {
+    "id": 7,
+    "name": "消火器パーキング銀座中央通り",
+    "prefecture": "東京都",
+    "city": "中央区",
+    "address": "中央区銀座4-1-1",
+    "station": "銀座駅徒歩2分",
+    "capacity": 12,
+    "price_per_hour": 600,
+    "price_per_day": 3600,
+    "latitude": 35.6719,
+    "longitude": 139.7649,
+    "features": "24時間営業,高級エリア,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-7-1.jpg",
+      "images/parking-7-2.jpg"
+    ],
+    "description": "銀座中央通りすぐ。高級ショッピングに最適。"
+  },
+  {
+    "id": 8,
+    "name": "消火器パーキング東京駅八重洲口",
+    "prefecture": "東京都",
+    "city": "千代田区",
+    "address": "千代田区丸の内1-9-1",
+    "station": "東京駅徒歩3分",
+    "capacity": 35,
+    "price_per_hour": 500,
+    "price_per_day": 3000,
+    "latitude": 35.6812,
+    "longitude": 139.7671,
+    "features": "24時間営業,駅近,防犯カメラ,EV充電,バリアフリー",
+    "images": [
+      "images/parking-8-1.jpg",
+      "images/parking-8-2.jpg"
+    ],
+    "description": "東京駅八重洲口すぐ。新幹線利用に便利。"
+  },
+  {
+    "id": 9,
+    "name": "消火器パーキング渋谷道玄坂",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "address": "渋谷区道玄坂一丁目1-1",
+    "station": "渋谷駅徒歩5分",
+    "capacity": 5,
+    "price_per_hour": 1200,
+    "price_per_day": 3000,
+    "latitude": 35.6580,
+    "longitude": 139.6977,
+    "features": "24時間営業,機械式,防犯カメラ,キャッシュレス決済,領収書発行可",
+    "images": [
+      "images/parking-9-1.jpg",
+      "images/parking-9-2.jpg",
+      "images/parking-9-3.jpg",
+      "images/parking-9-4.jpg",
+      "images/parking-9-5.jpg",
+      "images/parking-9-6.jpg"
+    ],
+    "description": "渋谷駅から徒歩5分。渋谷109やセンター街へのアクセス良好。機械式駐車場で安心・安全。",
+    "price_detail": {
+      "daytime": "7:00-20:00 → 15分300円",
+      "nighttime": "20:00-7:00 → 30分100円",
+      "max_charge": "3,000円/日"
+    },
+    "payment_methods": ["現金", "クレジットカード", "QRコード決済"],
+    "vehicle_restrictions": {
+      "height": "2.1m",
+      "width": "1.9m",
+      "length": "5.0m",
+      "weight": "2.5t"
+    },
+    "access_info": "渋谷駅ハチ公口より道玄坂方面へ徒歩5分。渋谷109の裏手。",
+    "nearby_spots": [
+      "渋谷109：徒歩3分",
+      "渋谷センター街：徒歩4分",
+      "渋谷駅：徒歩5分",
+      "東急ハンズ渋谷店：徒歩6分",
+      "渋谷TOEI：徒歩7分"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "消火器パーキング六本木ヒルズ前",
+    "prefecture": "東京都",
+    "city": "港区",
+    "address": "港区六本木6-10-1",
+    "station": "六本木駅徒歩4分",
+    "capacity": 28,
+    "price_per_hour": 500,
+    "price_per_day": 3000,
+    "latitude": 35.6604,
+    "longitude": 139.7292,
+    "features": "24時間営業,防犯カメラ,EV充電,キャッシュレス決済",
+    "images": [
+      "images/parking-10-1.jpg",
+      "images/parking-10-2.jpg"
+    ],
+    "description": "六本木ヒルズすぐ。ショッピング・ビジネスに。"
+  },
+  {
+    "id": 11,
+    "name": "消火器パーキング表参道駅前",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "address": "渋谷区神宮前4-1-1",
+    "station": "表参道駅徒歩2分",
+    "capacity": 16,
+    "price_per_hour": 550,
+    "price_per_day": 3300,
+    "latitude": 35.6654,
+    "longitude": 139.7124,
+    "features": "24時間営業,おしゃれエリア,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-11-1.jpg",
+      "images/parking-11-2.jpg"
+    ],
+    "description": "表参道のおしゃれエリア。ショッピングに最適。"
+  },
+  {
+    "id": 12,
+    "name": "消火器パーキング赤坂見附",
+    "prefecture": "東京都",
+    "city": "港区",
+    "address": "港区赤坂3-1-1",
+    "station": "赤坂見附駅徒歩3分",
+    "capacity": 20,
+    "price_per_hour": 450,
+    "price_per_day": 2700,
+    "latitude": 35.6794,
+    "longitude": 139.7369,
+    "features": "24時間営業,ビジネス街,防犯カメラ,EV充電",
+    "images": [
+      "images/parking-12-1.jpg",
+      "images/parking-12-2.jpg"
+    ],
+    "description": "赤坂のビジネス街。オフィス利用に便利。"
+  },
+  {
+    "id": 13,
+    "name": "消火器パーキング新橋駅前",
+    "prefecture": "東京都",
+    "city": "港区",
+    "address": "港区新橋2-16-1",
+    "station": "新橋駅徒歩2分",
+    "capacity": 24,
+    "price_per_hour": 400,
+    "price_per_day": 2400,
+    "latitude": 35.6658,
+    "longitude": 139.7576,
+    "features": "24時間営業,サラリーマンの街,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-13-1.jpg",
+      "images/parking-13-2.jpg"
+    ],
+    "description": "新橋駅すぐ。ビジネス利用に最適。"
+  },
+  {
+    "id": 14,
+    "name": "消火器パーキング浅草雷門前",
+    "prefecture": "東京都",
+    "city": "台東区",
+    "address": "台東区浅草2-3-1",
+    "station": "浅草駅徒歩3分",
+    "capacity": 18,
+    "price_per_hour": 350,
+    "price_per_day": 2100,
+    "latitude": 35.7115,
+    "longitude": 139.7967,
+    "features": "24時間営業,観光地,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-14-1.jpg",
+      "images/parking-14-2.jpg"
+    ],
+    "description": "浅草雷門すぐ。観光に便利です。"
+  },
+  {
+    "id": 15,
+    "name": "消火器パーキング吉祥寺駅前",
+    "prefecture": "東京都",
+    "city": "武蔵野市",
+    "address": "武蔵野市吉祥寺本町1-1-1",
+    "station": "吉祥寺駅徒歩3分",
+    "capacity": 22,
+    "price_per_hour": 350,
+    "price_per_day": 2100,
+    "latitude": 35.7032,
+    "longitude": 139.5797,
+    "features": "24時間営業,駅近,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-15-1.jpg",
+      "images/parking-15-2.jpg"
+    ],
+    "description": "吉祥寺駅すぐ。井の頭公園へのアクセス良好。"
+  },
+  {
+    "id": 16,
+    "name": "消火器パーキング立川駅北口",
+    "prefecture": "東京都",
+    "city": "立川市",
+    "address": "立川市曙町2-1-1",
+    "station": "立川駅徒歩4分",
+    "capacity": 26,
+    "price_per_hour": 300,
+    "price_per_day": 1800,
+    "latitude": 35.6985,
+    "longitude": 139.4141,
+    "features": "24時間営業,多摩エリア,防犯カメラ,EV充電",
+    "images": [
+      "images/parking-16-1.jpg",
+      "images/parking-16-2.jpg"
+    ],
+    "description": "立川駅北口すぐ。多摩エリアの中心地。"
+  },
+  {
+    "id": 17,
+    "name": "消火器パーキング町田駅前",
+    "prefecture": "東京都",
+    "city": "町田市",
+    "address": "町田市原町田6-1-1",
+    "station": "町田駅徒歩3分",
+    "capacity": 20,
+    "price_per_hour": 300,
+    "price_per_day": 1800,
+    "latitude": 35.5436,
+    "longitude": 139.4468,
+    "features": "24時間営業,商業地,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-17-1.jpg",
+      "images/parking-17-2.jpg"
+    ],
+    "description": "町田駅すぐ。ショッピングに便利。"
+  },
+  {
+    "id": 18,
+    "name": "消火器パーキング中野駅前",
+    "prefecture": "東京都",
+    "city": "中野区",
+    "address": "中野区中野5-1-1",
+    "station": "中野駅徒歩2分",
+    "capacity": 19,
+    "price_per_hour": 350,
+    "price_per_day": 2100,
+    "latitude": 35.7056,
+    "longitude": 139.6656,
+    "features": "24時間営業,駅近,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-18-1.jpg",
+      "images/parking-18-2.jpg"
+    ],
+    "description": "中野駅すぐ。中野ブロードウェイ近く。"
+  },
+  {
+    "id": 19,
+    "name": "消火器パーキング北千住駅前",
+    "prefecture": "東京都",
+    "city": "足立区",
+    "address": "足立区千住旭町1-1",
+    "station": "北千住駅徒歩3分",
+    "capacity": 23,
+    "price_per_hour": 300,
+    "price_per_day": 1800,
+    "latitude": 35.7491,
+    "longitude": 139.8048,
+    "features": "24時間営業,駅近,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-19-1.jpg",
+      "images/parking-19-2.jpg"
+    ],
+    "description": "北千住駅すぐ。足立区の中心地。"
+  },
+  {
+    "id": 20,
+    "name": "消火器パーキング六本木タワー",
+    "prefecture": "東京都",
+    "city": "港区",
+    "address": "港区六本木3-2-1",
+    "station": "六本木駅徒歩1分",
+    "capacity": 120,
+    "price_per_hour": 600,
+    "price_per_day": 3600,
+    "latitude": 35.6627,
+    "longitude": 139.7298,
+    "features": "24時間営業,立体駐車場,防犯カメラ,EV充電,バリアフリー,機械式,自動精算",
+    "images": [
+      "images/parking-20-1.jpg",
+      "images/parking-20-2.jpg",
+      "images/parking-20-3.jpg",
+      "images/parking-20-4.jpg"
+    ],
+    "description": "六本木駅直結の大型立体駐車場。最新設備完備で安心・快適。",
+    "price_detail": {
+      "daytime": "8:00-22:00 → 30分300円",
+      "nighttime": "22:00-8:00 → 60分200円",
+      "max_charge": "3,600円/日"
+    },
+    "payment_methods": ["現金", "クレジットカード", "QRコード決済", "電子マネー"],
+    "vehicle_restrictions": {
+      "height": "2.3m",
+      "width": "2.0m",
+      "length": "5.5m",
+      "weight": "3.0t"
+    },
+    "access_info": "六本木駅1a出口直結。エレベーター完備でアクセス抜群。",
+    "nearby_spots": [
+      "六本木ヒルズ：徒歩2分",
+      "東京ミッドタウン：徒歩5分",
+      "テレビ朝日：徒歩3分",
+      "国立新美術館：徒歩8分"
+    ],
+    "parking_type": "立体駐車場"
+  },
+  {
+    "id": 21,
+    "name": "消火器パーキング仙台駅前",
+    "prefecture": "宮城県",
+    "city": "仙台市青葉区",
+    "address": "仙台市青葉区中央1-1-1",
+    "station": "仙台駅徒歩3分",
+    "capacity": 35,
+    "price_per_hour": 300,
+    "price_per_day": 1800,
+    "latitude": 38.2606,
+    "longitude": 140.8819,
+    "features": "24時間営業,駅近,防犯カメラ,EV充電,キャッシュレス決済",
+    "images": [
+      "images/parking-21-1.jpg",
+      "images/parking-21-2.jpg"
+    ],
+    "description": "仙台駅すぐ。東北最大の繁華街へのアクセス良好。"
+  },
+  {
+    "id": 22,
+    "name": "消火器パーキング大阪梅田",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "address": "大阪市北区梅田1-1-1",
+    "station": "梅田駅徒歩3分",
+    "capacity": 35,
+    "price_per_hour": 400,
+    "price_per_day": 2400,
+    "latitude": 34.7024,
+    "longitude": 135.4959,
+    "features": "24時間営業,駅近,屋根付き,防犯カメラ,女性専用エリア",
+    "images": [
+      "images/parking-22-1.jpg",
+      "images/parking-22-2.jpg"
+    ],
+    "description": "梅田駅徒歩3分。女性専用エリア完備で安心です。"
+  },
+  {
+    "id": 23,
+    "name": "消火器パーキング大阪難波",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "address": "大阪市中央区難波5-1-1",
+    "station": "難波駅徒歩2分",
+    "capacity": 28,
+    "price_per_hour": 400,
+    "price_per_day": 2400,
+    "latitude": 34.6618,
+    "longitude": 135.5013,
+    "features": "24時間営業,繁華街,防犯カメラ,キャッシュレス決済",
+    "images": [
+      "images/parking-23-1.jpg",
+      "images/parking-23-2.jpg"
+    ],
+    "description": "難波の中心地。道頓堀・心斎橋へのアクセス抜群。"
+  },
+  {
+    "id": 24,
+    "name": "消火器パーキング神戸三宮",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "address": "神戸市中央区三宮町1-1-1",
+    "station": "三宮駅徒歩3分",
+    "capacity": 30,
+    "price_per_hour": 350,
+    "price_per_day": 2100,
+    "latitude": 34.6937,
+    "longitude": 135.1955,
+    "features": "24時間営業,港町,防犯カメラ,EV充電,キャッシュレス決済",
+    "images": [
+      "images/parking-24-1.jpg",
+      "images/parking-24-2.jpg"
+    ],
+    "description": "三宮駅すぐ。神戸の中心地で観光・ショッピングに便利。"
+  }
+]
