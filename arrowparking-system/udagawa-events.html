@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宇田川駐車場 イベント利用 | アローパーキング</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Yu Gothic', sans-serif; color: #333; background: #f5f7fa; }
+.navbar { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1rem 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.nav-menu { display: flex; list-style: none; gap: 2rem; }
+.nav-menu a { color: white; text-decoration: none; }
+.hero { position: relative; height: 600px; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 0 20px; }
+.hero-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.75rem 2rem; border-radius: 50px; font-size: 1.1rem; margin-bottom: 2rem; font-weight: 600; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+.hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+.hero-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 1.2rem 3rem; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; }
+.btn-primary { background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4); }
+.btn-secondary { background: white; color: #667eea; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin: 2rem 0; color: #667eea; text-decoration: none; font-weight: 600; }
+.gallery-hero { background: #000; }
+.gallery-large { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 0; }
+.gallery-large img { width: 100%; height: 400px; object-fit: cover; }
+.events-section { padding: 5rem 0; background: white; }
+.section-header { text-align: center; margin-bottom: 4rem; }
+.section-header h2 { font-size: 3rem; color: #667eea; margin-bottom: 1rem; }
+.event-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.event-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 3rem 2rem; border-radius: 20px; text-align: center; }
+.event-card .icon { font-size: 4rem; margin-bottom: 1.5rem; }
+.event-card h3 { font-size: 1.8rem; color: #667eea; margin-bottom: 1rem; }
+.pricing-section { padding: 5rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+.pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.pricing-card { background: white; color: #333; padding: 3rem 2rem; border-radius: 20px; text-align: center; }
+.pricing-card h3 { font-size: 1.8rem; color: #667eea; margin-bottom: 1rem; }
+.pricing-card .price { font-size: 3rem; font-weight: bold; color: #667eea; margin: 1.5rem 0; }
+.pricing-card ul { list-style: none; margin: 2rem 0; text-align: left; }
+.pricing-card li { padding: 0.75rem 0; border-bottom: 1px solid #eee; }
+.pricing-card li:before { content: '✓'; color: #667eea; font-weight: bold; margin-right: 0.5rem; }
+.showcase-section { padding: 5rem 0; background: #f8f9fa; }
+.showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.showcase-item { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+.showcase-item img { width: 100%; height: 300px; object-fit: cover; }
+.showcase-item .content { padding: 2rem; }
+.showcase-item h3 { font-size: 1.5rem; color: #667eea; margin-bottom: 1rem; }
+.cta-section { padding: 6rem 0; background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); text-align: center; color: white; }
+.cta-section h2 { font-size: 3rem; margin-bottom: 1.5rem; }
+.footer { background: #2c3e50; color: white; padding: 3rem 0 1rem; }
+.footer-contact { text-align: center; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.phone-number { font-size: 2rem; margin: 1rem 0; }
+.phone-number a { color: #667eea; text-decoration: none; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+.footer-section ul { list-style: none; }
+.footer-section a { color: #bdc3c7; text-decoration: none; }
+.footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #bdc3c7; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="container nav-container">
+<a href="index.html" class="logo">
+<img src="logo.png" alt="アローパーキング" style="width: 40px; height: 40px; border-radius: 50%;">
+<span>アローパーキング</span>
+</a>
+<ul class="nav-menu">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="parkings.html">駐車場を探す</a></li>
+<li><a href="company.html">会社概要</a></li>
+<li><a href="landowner.html">土地活用</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<div class="hero-badge">🎉 イベント利用可能</div>
+<h1>宇田川駐車場でイベント開催</h1>
+<p>渋谷最大級196台収容スペースを、あなたのイベントに</p>
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary">お問い合わせ・見積もり依頼</a>
+<a href="udagawa.html" class="btn btn-secondary">駐車場詳細を見る</a>
+</div>
+</div>
+</section>
+
+<div class="container">
+<a href="udagawa.html" class="back-link">← 駐車場詳細に戻る</a>
+</div>
+
+<section class="gallery-hero">
+<div class="gallery-large">
+<img src="images/parking-8-1.jpg" alt="イベント実績" onerror="this.src='https://via.placeholder.com/800x400?text=Event+Photo+1'">
+<img src="images/parking-8-2.jpg" alt="イベント実績" onerror="this.src='https://via.placeholder.com/800x400?text=Event+Photo+2'">
+<img src="images/parking-8-3.jpg" alt="イベント実績" onerror="this.src='https://via.placeholder.com/800x400?text=Event+Photo+3'">
+<img src="images/parking-8-4.jpg" alt="イベント実績" onerror="this.src='https://via.placeholder.com/800x400?text=Event+Photo+4'">
+</div>
+</section>
+
+<section class="events-section">
+<div class="container">
+<div class="section-header">
+<h2>🎪 こんなイベントに対応できます</h2>
+<p style="font-size: 1.3rem; color: #666;">196台収容の大型スペースだからこそ実現できる、多彩なイベント活用</p>
+</div>
+<div class="event-types">
+<div class="event-card">
+<div class="icon">🏢</div>
+<h3>企業イベント</h3>
+<p>製品発表会、展示会、商談会など、大規模な企業イベントに最適。</p>
+</div>
+<div class="event-card">
+<div class="icon">📸</div>
+<h3>撮影・ロケ</h3>
+<p>映画、ドラマ、CM、PV撮影など。都心の駐車場という特殊なロケーションを活かした撮影が可能。</p>
+</div>
+<div class="event-card">
+<div class="icon">🎨</div>
+<h3>展示会・マーケット</h3>
+<p>アート展示、フリーマーケット、ポップアップストアなど。</p>
+</div>
+<div class="event-card">
+<div class="icon">🎵</div>
+<h3>音楽イベント</h3>
+<p>ライブ、DJ イベント、音楽フェスなど。</p>
+</div>
+<div class="event-card">
+<div class="icon">🚗</div>
+<h3>カーイベント</h3>
+<p>カーショー、試乗会、自動車展示会など。</p>
+</div>
+<div class="event-card">
+<div class="icon">🎪</div>
+<h3>その他イベント</h3>
+<p>フードフェス、スポーツイベント、チャリティーイベントなど。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="pricing-section">
+<div class="container">
+<div class="section-header">
+<h2 style="color: white;">💰 料金プラン</h2>
+<p style="color: rgba(255,255,255,0.9); font-size: 1.3rem;">イベント規模に応じた柔軟なプランをご用意</p>
+</div>
+<div class="pricing-cards">
+<div class="pricing-card">
+<h3>半日プラン</h3>
+<div class="price">¥150,000<span style="font-size: 1.2rem; color: #999;">/4時間</span></div>
+<ul>
+<li>最大収容: 196台分スペース</li>
+<li>設営時間込み</li>
+<li>電源使用可能</li>
+<li>警備員1名配置</li>
+<li>駐車場内トイレ利用可</li>
+</ul>
+<a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">お問い合わせ</a>
+</div>
+<div class="pricing-card">
+<h3>1日プラン</h3>
+<div class="price">¥250,000<span style="font-size: 1.2rem; color: #999;">/8時間</span></div>
+<ul>
+<li>最大収容: 196台分スペース</li>
+<li>設営・撤収時間込み</li>
+<li>電源使用可能</li>
+<li>警備員2名配置</li>
+<li>駐車場内トイレ利用可</li>
+<li>簡易テント貸出可</li>
+</ul>
+<a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">お問い合わせ</a>
+</div>
+<div class="pricing-card">
+<h3>複数日プラン</h3>
+<div class="price">要相談</div>
+<ul>
+<li>2日以上のご利用</li>
+<li>大規模イベント対応</li>
+<li>完全カスタマイズ可能</li>
+<li>専任スタッフ配置</li>
+<li>各種設備レンタル対応</li>
+<li>特別割引適用</li>
+</ul>
+<a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">お問い合わせ</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="showcase-section">
+<div class="container">
+<div class="section-header">
+<h2>📊 過去のイベント実績</h2>
+<p style="font-size: 1.3rem; color: #666;">様々な企業・団体様にご利用いただいています</p>
+</div>
+<div class="showcase-grid">
+<div class="showcase-item">
+<img src="images/parking-8-5.jpg" alt="企業イベント" onerror="this.src='https://via.placeholder.com/600x300?text=Corporate+Event'">
+<div class="content">
+<h3>🏢 新製品発表会</h3>
+<p>大手自動車メーカー様の新型車発表イベント。200名以上のゲストをお迎えし、試乗会も同時開催。</p>
+</div>
+</div>
+<div class="showcase-item">
+<img src="images/parking-8-6.jpg" alt="音楽イベント" onerror="this.src='https://via.placeholder.com/600x300?text=Music+Festival'">
+<div class="content">
+<h3>🎵 渋谷音楽フェス</h3>
+<p>地域密着型の音楽イベント。ステージ設営、フードブース出店で300名以上が来場。</p>
+</div>
+</div>
+<div class="showcase-item">
+<img src="images/parking-8-4.jpg" alt="撮影" onerror="this.src='https://via.placeholder.com/600x300?text=Film+Location'">
+<div class="content">
+<h3>📸 映画撮影ロケ</h3>
+<p>人気映画のカーチェイスシーン撮影。夜間貸切で大規模な撮影を実施。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section" id="contact">
+<div class="container">
+<h2>🎉 イベント開催のご相談・お見積もり</h2>
+<p style="font-size: 1.5rem; margin-bottom: 3rem;">まずはお気軽にお問い合わせください。専任スタッフが丁寧にご対応いたします</p>
+<div class="hero-buttons">
+<a href="tel:03-5428-6822" class="btn btn-secondary">📞 電話で相談する</a>
+<a href="/cdn-cgi/l/email-protection#543122313a2027143526263b23792435263f3d3a337a373b7a3e24" class="btn btn-secondary">✉️ メールで相談する</a>
+</div>
+<p style="margin-top: 2rem; font-size: 1.1rem;">営業時間：平日 9:30〜17:30</p>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-contact">
+<h3>ご相談・お問い合わせ窓口</h3>
+<p class="phone-number"><a href="tel:03-5428-6822">03-5428-6822</a></p>
+<p style="color: #bdc3c7;">営業時間：平日 9:30〜17:30</p>
+<a href="/cdn-cgi/l/email-protection#650013000b1116250417170a12481504170e0c0b024b060a4b0f15" style="display: inline-block; padding: 1rem 2.5rem; background: #667eea; color: white; text-decoration: none; border-radius: 50px; margin-top: 1rem;">イベント専用メール</a>
+</div>
+<div class="footer-content">
+<div class="footer-section">
+<h4>メニュー</h4>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="parkings.html">駐車場を探す</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>株式会社アローパーキング</h4>
+<p>〒154-0041<br>東京都渋谷区神南1-20-15 神南101ビル5階</p>
+<p>TEL: <a href="tel:03-5428-6822">03-5428-68

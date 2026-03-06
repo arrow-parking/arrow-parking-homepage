@@ -3,17 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="土地活用をご検討の地主様へ。駐車場経営のメリット、運用プラン、収益シミュレーションをご紹介。">
-    <title>土地活用 | 消火器株式会社</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="駐車場ビジネスを一緒に考えませんか。30年以上の実績で土地活用をサポートします。">
+    <title>土地活用・オーナー様募集 | 株式会社アローパーキング</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif; 
+            line-height: 1.7; 
+            color: #333;
+            background: #f5f7fa;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        .hero .intro {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .content {
+            padding: 4rem 0;
+        }
+        
+        .section {
+            margin: 4rem 0;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 5px solid #667eea;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .step h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .step p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .flow {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .flow-step {
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        .flow-icon {
+            background: #f0f4ff;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+            font-size: 2rem;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #667eea;
+        }
+        
+        .patterns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .pattern {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 8px solid #667eea;
+        }
+        .pattern h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .pattern .type {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        .pattern .recommend {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #ffc107;
+        }
+        .pattern .recommend strong {
+            display: block;
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+        .pattern .merits {
+            margin-top: 1.5rem;
+        }
+        .pattern .merits h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .pattern .merits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pattern .merits li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .pattern .merits li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .point {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .point h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .point ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .point li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .point li:before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        .footer-contact {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-contact h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .phone-number {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        .phone-number a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .business-hours {
+            color: #bdc3c7;
+            margin: 0.5rem 0;
+        }
+        .btn-contact {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        .btn-contact:hover {
+            background: #5568d3;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section li {
+            margin: 0.5rem 0;
+        }
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+    </style>
 </head>
 <body>
-    <!-- ナビゲーション -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🅿️</span>
-                <span class="logo-text">消火器株式会社</span>
+                <img src="logo.png" alt="アローパーキング" style="width: 40px; height: 40px; border-radius: 50%;">
+                <span class="logo-text">アローパーキング</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">ホーム</a></li>
@@ -25,186 +399,164 @@
         </div>
     </nav>
 
-    <!-- ページヘッダー -->
-    <div class="page-header">
+    <div class="hero">
         <div class="container">
-            <h1>土地活用</h1>
-            <p class="subtitle">Land Utilization</p>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">空地の活用をお考えの方、駐車場を検討されている方</p>
+            <h1>駐車場ビジネスを<br>一緒に考えませんか</h1>
+            <div class="intro">
+                <p>アローパーキングは、<strong>30年以上の実績</strong>をもとに、お客様からの信頼性、安心性、収益性を確かなものとして、それが納得のできる収入になるよう努めています。</p>
+            </div>
         </div>
     </div>
 
-    <!-- メインコンテンツ -->
-    <main class="container page-content">
-        <!-- イントロ -->
-        <div class="landowner-intro">
-            <h2>遊休地を駐車場として活用しませんか？</h2>
-            <p>初期費用0円、安定収入を実現</p>
-            <a href="contact.html" class="btn btn-primary btn-large">無料相談を申し込む</a>
-        </div>
-
-        <!-- メリット -->
-        <section style="margin-bottom: 3rem;">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">駐車場経営のメリット</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>初期費用0円〜</h3>
-                    <p>一括借上げ方式なら初期投資不要でスタートできます</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏗️</div>
-                    <h3>転用が容易</h3>
-                    <p>将来別の用途に変更する際もすぐに撤去可能です</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>安定収入</h3>
-                    <p>毎月固定の賃料収入が得られます</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 適した土地 -->
-        <section style="background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 3rem;">
-            <h2 style="margin-bottom: 2rem;">こんな土地に最適</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 1rem 0; border-bottom: 1px solid #eee; color: #555; font-size: 1.1rem;">
-                    ✓ 駅やオフィス街の近く
-                </li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid #eee; color: #555; font-size: 1.1rem;">
-                    ✓ 住宅地や商業施設の周辺
-                </li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid #eee; color: #555; font-size: 1.1rem;">
-                    ✓ 20坪以上の空き地
-                </li>
-                <li style="padding: 1rem 0; color: #555; font-size: 1.1rem;">
-                    ✓ 将来的に別用途を検討中
-                </li>
-            </ul>
-        </section>
-
-        <!-- 運用プラン -->
-        <section style="margin-bottom: 3rem;">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">運用プラン</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="plan-box">
-                    <h3>プラン① 一括借上げ方式</h3>
-                    <p>当社が土地を一括借上げ</p>
-                    <p>固定賃料をお支払い</p>
-                    <p style="margin-top: 1rem; padding: 1rem; background: #f0f0ff; border-radius: 5px;">
-                        <strong>おすすめポイント：</strong><br>
-                        初期費用0円、運営・管理は全て当社が実施
-                    </p>
-                </div>
-                <div class="plan-box">
-                    <h3>プラン② 管理委託方式</h3>
-                    <p>駐車場の管理運営を当社が代行</p>
-                    <p>売上の80%をお支払い</p>
-                    <p style="margin-top: 1rem; padding: 1rem; background: #f0f0ff; border-radius: 5px;">
-                        <strong>おすすめポイント：</strong><br>
-                        高稼働時は高収益、運営の手間なし
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 収益シミュレーション -->
-        <section style="margin-bottom: 3rem;">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">収益シミュレーション例</h2>
-            <div class="simulation-box">
-                <h3>50坪の土地の場合</h3>
-                <p>土地面積: 50坪</p>
-                <p>収容台数: 10台</p>
-                <p>月額賃料: <strong>150,000円〜</strong></p>
-                <p>年間収入: <strong>1,800,000円〜</strong></p>
-            </div>
-        </section>
-
-        <!-- ご相談の流れ -->
-        <section style="background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 3rem;">
-            <h2 style="margin-bottom: 2rem;">ご相談の流れ</h2>
-            <div style="display: grid; gap: 1.5rem;">
-                <div style="display: flex; gap: 1rem; align-items: start;">
-                    <div style="min-width: 50px; height: 50px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">1</div>
-                    <div>
-                        <h4 style="color: #333; margin-bottom: 0.5rem;">お問い合わせ</h4>
-                        <p style="color: #666;">まずはお気軽にご相談ください</p>
+    <div class="content">
+        <div class="container">
+            <div class="section">
+                <h2 class="section-title">駐車場開業までの4つのステップ</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>ご提案</h3>
+                        <p>駐輪業者や当社の社員が土地オーナー様のご要望やご予定な条件を選定し、最適なプラン、お見積の提示を致します。</p>
                     </div>
-                </div>
-                <div style="display: flex; gap: 1rem; align-items: start;">
-                    <div style="min-width: 50px; height: 50px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">2</div>
-                    <div>
-                        <h4 style="color: #333; margin-bottom: 0.5rem;">現地調査（無料）</h4>
-                        <p style="color: #666;">土地の状況を確認させていただきます</p>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>現地調査</h3>
+                        <p>ご相談を受けてから正式に調査に入ります。専門スタッフが、さまざまな角度から調査・分析し、最大限の収益を追求します。</p>
                     </div>
-                </div>
-                <div style="display: flex; gap: 1rem; align-items: start;">
-                    <div style="min-width: 50px; height: 50px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">3</div>
-                    <div>
-                        <h4 style="color: #333; margin-bottom: 0.5rem;">プラン提案</h4>
-                        <p style="color: #666;">最適な運用プランをご提案いたします</p>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>オープンまでの費用</h3>
+                        <p>駐車場運営に必要な駐車機器・看板・収金機から初期費用まで、当社が負担します。</p>
                     </div>
-                </div>
-                <div style="display: flex; gap: 1rem; align-items: start;">
-                    <div style="min-width: 50px; height: 50px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">4</div>
-                    <div>
-                        <h4 style="color: #333; margin-bottom: 0.5rem;">ご契約</h4>
-                        <p style="color: #666;">条件にご納得いただければご契約</p>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 1rem; align-items: start;">
-                    <div style="min-width: 50px; height: 50px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">5</div>
-                    <div>
-                        <h4 style="color: #333; margin-bottom: 0.5rem;">工事・オープン</h4>
-                        <p style="color: #666;">工事完了後、駐車場として運営開始</p>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>運営管理</h3>
+                        <p>定期的な巡回管理、集金、清掃、場内トラブル対応まで、当社が業務管理します。</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- FAQ -->
-        <div class="faq-section">
-            <h2>よくあるご質問</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4>Q. 初期費用は？</h4>
-                    <p>A. 一括借上げ方式なら初期費用0円でスタートできます。</p>
+            <div class="section">
+                <h2 class="section-title">ご相談からオープンまでの流れ</h2>
+                <div class="flow">
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <div class="flow-icon">💬</div>
+                            <p>ご相談</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="flow-icon">📊</div>
+                            <p>調査分析</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="flow-icon">📋</div>
+                            <p>プランの<br>ご提案</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="flow-icon">✍️</div>
+                            <p>ご契約</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="flow-icon">🔧</div>
+                            <p>機器設置と<br>工事期間</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="flow-icon">🅿️</div>
+                            <p>駐車場<br>OPEN</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h4>Q. 契約期間は？</h4>
-                    <p>A. 3年〜の契約となります。更新も可能です。</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">事業パートナーとなるオーナー様へ<br>選べる2つのパターン</h2>
+                <div class="patterns">
+                    <div class="pattern">
+                        <h3>定額賃料収入</h3>
+                        <div class="type">駐車場として貸す（一時使用賃貸契約）</div>
+                        <div class="recommend">
+                            <strong>こんな方におすすめします</strong>
+                            <p>初期投資をしたくない / 面倒な事はしたくない / 短期間での活用を考えている</p>
+                        </div>
+                        <div class="merits">
+                            <h4>MERITメリット</h4>
+                            <ul>
+                                <li>毎月定額の賃料収入があります</li>
+                                <li>機器設置工事から運営管理、利用者のトラブルや近隣の苦情対応なども全て当社が対応するため、手間がかからず安定した収入が得られます</li>
+                                <li>収入自体は、近隣周辺の月額賃料相当×台数</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>変動売上収入</h3>
+                        <div class="type">駐車場を一緒に始める（共同経営・運営管理契約）</div>
+                        <div class="recommend">
+                            <strong>こんな方におすすめします</strong>
+                            <p>駐車場ビジネスを検討している / 高収益を見込める立地 / 長期間使用が可能である</p>
+                        </div>
+                        <div class="merits">
+                            <h4>MERITメリット</h4>
+                            <ul>
+                                <li>駐輪業者が高ければ、定額賃料よりも高収入です</li>
+                                <li>機器、設備工事など全てこちらで支援します。集金・ロール紙交換、定期的な場内清掃、機器管理などの定期的なメンテナンス業務、営業管理サポートしたします</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h4>Q. 税金対策になる？</h4>
-                    <p>A. 固定資産税の軽減効果が期待できます。詳しくはご相談ください。</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. 小さい土地でも可能？</h4>
-                    <p>A. 1台から対応可能です。まずはご相談ください。</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">なぜ駐車場ビジネスが伸び続けているのか</h2>
+                <div class="points">
+                    <div class="point">
+                        <h3>POINT 1</h3>
+                        <ul>
+                            <li>立地の有効活用として最適な事業</li>
+                            <li>機器選定などの人的作業がかからない</li>
+                            <li>機器の設置に莫大なコストがかかる必要が少ない</li>
+                            <li>初期投資がない</li>
+                            <li>駐車場返却の取り組まれが難しい</li>
+                        </ul>
+                    </div>
+                    <div class="point">
+                        <h3>POINT 2 - 駐車場運営で大きな差</h3>
+                        <ul>
+                            <li>近隣に競合の駐車場が登場できる</li>
+                            <li>本場の大型化</li>
+                            <li>地震や津波による損害</li>
+                            <li>タイヤやオイルの交換など</li>
+                            <li>近隣からのクレーム</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- CTA -->
-        <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
-            <h2 style="margin-bottom: 1rem;">まずはお気軽にご相談ください</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;">現地調査・プラン提案は無料です</p>
-            <a href="contact.html" class="btn btn-primary btn-large" style="background: white; color: #667eea;">お問い合わせはこちら</a>
+    <div class="cta">
+        <div class="container">
+            <h2>まずはお気軽にご相談ください</h2>
+            <p>駐車場ビジネスに関するご質問やご相談を承ります</p>
+            <a href="contact.html" class="btn">お問い合わせ</a>
         </div>
-    </main>
+    </div>
 
-    <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="footer-contact">
                 <h3>ご相談・お問い合わせ窓口</h3>
                 <p class="phone-number">
-                    <a href="tel:03-1234-5678">03-1234-5678</a>
+                    <a href="tel:03-5428-6822">03-5428-6822</a>
                 </p>
-                <p class="business-hours">営業時間：平日 9:00〜18:00</p>
-                <a href="mailto:info@shoukaki-parking.co.jp" class="btn-contact">
-                    メールでのお問い合わせ
-                </a>
+                <p class="business-hours">営業時間：平日 9:30〜17:30</p>
+                <a href="mailto:info@arrow-parking.co.jp" class="btn-contact">メールでのお問い合わせ</a>
             </div>
             
             <div class="footer-content">
@@ -220,19 +572,17 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>株式会社消火器</h4>
-                    <p>〒100-0001<br>東京都千代田区千代田1-1-1</p>
-                    <p>TEL: <a href="tel:03-1234-5678">03-1234-5678</a></p>
-                    <p>FAX: 03-1234-5679</p>
+                    <h4>株式会社アローパーキング</h4>
+                    <p>〒154-0041<br>東京都渋谷区神南1-20-15 神南101ビル5階</p>
+                    <p>TEL: <a href="tel:03-5428-6822">03-5428-6822</a></p>
+                    <p>FAX: 03-5428-6821</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 消火器株式会社. All rights reserved.</p>
+                <p>&copy; 2024 株式会社アローパーキング. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="js/config.js"></script>
-    <script src="js/site.js"></script>
 </body>
 </html>

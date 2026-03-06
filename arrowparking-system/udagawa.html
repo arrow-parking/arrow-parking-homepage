@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アローパーキング宇田川 | アローパーキング</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Yu Gothic', sans-serif; color: #333; background: #f5f7fa; }
+.navbar { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.nav-menu { display: flex; list-style: none; gap: 2rem; }
+.nav-menu a { color: white; text-decoration: none; }
+.page-content { padding: 3rem 0; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: #667eea; text-decoration: none; font-weight: 600; }
+.parking-detail { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.detail-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 2rem; }
+.badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; margin-bottom: 1rem; font-weight: 600; }
+.detail-header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.gallery-section { background: #000; position: relative; }
+.gallery-main { width: 100%; height: 500px; position: relative; overflow: hidden; }
+.gallery-main img { width: 100%; height: 100%; object-fit: cover; display: none; }
+.gallery-main img.active { display: block; }
+.gallery-nav { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; padding: 0 1rem; transform: translateY(-50%); }
+.gallery-btn { background: rgba(255,255,255,0.9); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; }
+.gallery-thumbnails { display: flex; gap: 1rem; padding: 1rem; background: #f5f5f5; overflow-x: auto; }
+.gallery-thumbnail { width: 100px; height: 80px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 3px solid transparent; flex-shrink: 0; }
+.gallery-thumbnail.active { border-color: #667eea; }
+.detail-content { padding: 2rem; }
+.detail-section { margin: 2.5rem 0; padding: 2rem; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #667eea; }
+.detail-section h2 { color: #667eea; margin-bottom: 1.5rem; font-size: 1.8rem; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.info-item { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.info-item strong { color: #667eea; display: block; margin-bottom: 0.5rem; }
+.info-item span { font-size: 1.2rem; font-weight: 600; }
+.price-row { display: flex; justify-content: space-between; padding: 1.5rem; background: white; margin: 1rem 0; border-radius: 10px; }
+.price-value { color: #667eea; font-weight: bold; font-size: 1.5rem; }
+.feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; list-style: none; }
+.feature-list li { padding: 1rem 1.5rem; background: white; border-radius: 10px; }
+.feature-list li:before { content: '✓'; color: #667eea; font-weight: bold; margin-right: 0.5rem; }
+.map-container { width: 100%; height: 400px; border-radius: 15px; overflow: hidden; }
+.map-container iframe { width: 100%; height: 100%; border: none; }
+.btn { display: inline-block; padding: 1rem 3rem; text-decoration: none; border-radius: 50px; font-weight: bold; }
+.btn-primary { background: #667eea; color: white; }
+.event-banner { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 3rem 2rem; border-radius: 15px; text-align: center; margin: 2rem 0; }
+.event-banner h3 { font-size: 2rem; margin-bottom: 1rem; }
+.footer { background: #2c3e50; color: white; padding: 3rem 0 1rem; margin-top: 4rem; }
+.footer-contact { text-align: center; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.phone-number { font-size: 2rem; margin: 1rem 0; }
+.phone-number a { color: #667eea; text-decoration: none; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+.footer-section ul { list-style: none; }
+.footer-section a { color: #bdc3c7; text-decoration: none; }
+.footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #bdc3c7; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="container nav-container">
+<a href="index.html" class="logo">
+<img src="logo.png" alt="アローパーキング" style="width: 40px; height: 40px; border-radius: 50%;">
+<span>アローパーキング</span>
+</a>
+<ul class="nav-menu">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="parkings.html">駐車場を探す</a></li>
+<li><a href="company.html">会社概要</a></li>
+<li><a href="landowner.html">土地活用</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="container page-content">
+<a href="parkings.html" class="back-link">← 一覧に戻る</a>
+
+<div class="parking-detail">
+<div class="detail-header">
+<div class="badge">⭐ 渋谷最大級</div>
+<h1>アローパーキング宇田川</h1>
+<div>📍 東京都渋谷区宇田川町15-1</div>
+<div>🚗 収容台数196台 | 🚃 JR渋谷駅徒歩5分 | ⏰ 24時間営業</div>
+</div>
+
+<div class="gallery-section">
+<div class="gallery-main">
+<img src="images/parking-8-1.jpg" class="active" alt="宇田川駐車場" onerror="this.src='https://via.placeholder.com/800x500?text=宇田川駐車場'">
+<img src="images/parking-8-2.jpg" onerror="this.src='https://via.placeholder.com/800x500?text=宇田川駐車場'">
+<img src="images/parking-8-3.jpg" onerror="this.src='https://via.placeholder.com/800x500?text=宇田川駐車場'">
+<img src="images/parking-8-4.jpg" onerror="this.src='https://via.placeholder.com/800x500?text=宇田川駐車場'">
+<img src="images/parking-8-5.jpg" onerror="this.src='https://via.placeholder.com/800x500?text=宇田川駐車場'">
+<img src="images/parking-8-6.jpg" onerror="this.src='https://via.placeholder.com/800x500?text=宇田川駐車場'">
+<div class="gallery-nav">
+<button class="gallery-btn" onclick="prevImage()">‹</button>
+<button class="gallery-btn" onclick="nextImage()">›</button>
+</div>
+</div>
+<div class="gallery-thumbnails">
+<img src="images/parking-8-1.jpg" class="gallery-thumbnail active" onclick="showImage(0)" onerror="this.src='https://via.placeholder.com/100x80'">
+<img src="images/parking-8-2.jpg" class="gallery-thumbnail" onclick="showImage(1)" onerror="this.src='https://via.placeholder.com/100x80'">
+<img src="images/parking-8-3.jpg" class="gallery-thumbnail" onclick="showImage(2)" onerror="this.src='https://via.placeholder.com/100x80'">
+<img src="images/parking-8-4.jpg" class="gallery-thumbnail" onclick="showImage(3)" onerror="this.src='https://via.placeholder.com/100x80'">
+<img src="images/parking-8-5.jpg" class="gallery-thumbnail" onclick="showImage(4)" onerror="this.src='https://via.placeholder.com/100x80'">
+<img src="images/parking-8-6.jpg" class="gallery-thumbnail" onclick="showImage(5)" onerror="this.src='https://via.placeholder.com/100x80'">
+</div>
+</div>
+
+<div class="detail-content">
+<div class="detail-section">
+<h2>📋 基本情報</h2>
+<div class="info-grid">
+<div class="info-item"><strong>収容台数</strong><span>196台</span></div>
+<div class="info-item"><strong>都道府県</strong><span>東京都</span></div>
+<div class="info-item"><strong>市区町村</strong><span>渋谷区</span></div>
+<div class="info-item"><strong>最寄駅</strong><span>JR渋谷駅徒歩5分</span></div>
+</div>
+</div>
+
+<div class="detail-section">
+<h2>💰 料金</h2>
+<div class="price-row"><span>平日 12時間最大</span><span class="price-value">¥3,200</span></div>
+<div class="price-row"><span>土日祝 12時間最大</span><span class="price-value">¥4,400</span></div>
+<div class="price-row"><span>8:00-20:00（30分）</span><span class="price-value">¥400</span></div>
+<div class="price-row"><span>20:00-8:00（60分）</span><span class="price-value">¥100</span></div>
+</div>
+
+<div class="detail-section">
+<h2>✨ 特徴・設備</h2>
+<ul class="feature-list">
+<li>24時間営業</li><li>機械式駐車場</li><li>防犯カメラ完備</li><li>キャッシュレス決済対応</li>
+<li>警備員常駐</li><li>オンライン予約可能</li><li>提携店割引あり</li>
+</ul>
+</div>
+
+<div class="detail-section">
+<h2>📝 駐車場について</h2>
+<p>渋谷駅徒歩5分、渋谷エリア最大級196台収容の大型駐車場です。24時間警備員が常駐しており、最新の防犯システムで大切なお車を守ります。</p>
+</div>
+
+<div class="detail-section">
+<h2>🚗 車両制限</h2>
+<div class="info-grid">
+<div class="info-item"><strong>高さ</strong><span>2.1m以下</span></div>
+<div class="info-item"><strong>幅</strong><span>1.8m以下</span></div>
+<div class="info-item"><strong>長さ</strong><span>5.0m以下</span></div>
+<div class="info-item"><strong>重量</strong><span>2.5t以下</span></div>
+</div>
+</div>
+
+<div class="detail-section">
+<h2>💳 支払い方法</h2>
+<ul class="feature-list">
+<li>現金</li><li>クレジットカード</li><li>QRコード決済</li><li>電子マネー</li>
+</ul>
+</div>
+
+<div class="detail-section">
+<h2>🗺️ アクセスマップ</h2>
+<div class="map-container">
+<iframe src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E5%AE%87%E7%94%B0%E5%B7%9D%E7%94%BA15-1&hl=ja&z=16&output=embed" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+
+<div style="text-align: center; margin: 3rem 0;">
+<a href="https://select-type.com" target="_blank" class="btn btn-primary">📱 今すぐ予約する</a>
+</div>
+
+<div class="event-banner">
+<h3>🎉 イベント利用について</h3>
+<p>196台収容の大型スペースを活かし、企業イベント・撮影・展示会など様々な用途でご利用いただけます</p>
+<a href="udagawa-events.html" class="btn" style="background: white; color: #667eea; font-weight: bold;">イベント詳細・お問い合わせ →</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-contact">
+<h3>ご相談・お問い合わせ窓口</h3>
+<p class="phone-number"><a href="tel:03-5428-6822">03-5428-6822</a></p>
+<p style="color: #bdc3c7;">営業時間：平日 9:30〜17:30</p>
+</div>
+<div class="footer-content">
+<div class="footer-section">
+<h4>メニュー</h4>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="parkings.html">駐車場を探す</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>株式会社アローパーキング</h4>
+<p>〒154-0041<br>東京都渋谷区神南1-20-15 神南101ビル5階</p>
+<p>TEL: <a href="tel:03-5428-6822">03-5428-6822</a></p>
+<p>FAX: 03-5428-6821</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 アローパーキング株式会社. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+let currentImageIndex = 0;
+function showImage(index) {
+const images = document.querySelectorAll('.gallery-main img');
+const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+images.forEach(img => img.classList.remove('active'));
+thumbnails.forEach(thumb => thumb.classList.remove('active'));
+images[index].classList.add('active');
+thumbnails[index].classList.add('active');
+currentImageIndex = index;
+}
+function nextImage() {
+const images = document.querySelectorAll('.gallery-main img');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+showImage(currentImageIndex);
+}
+function prevImage() {
+const images = document.querySelectorAll('.gallery-main img');
+currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+showImage(currentImageIndex);
+}
+</script>
+</body>
+</html>

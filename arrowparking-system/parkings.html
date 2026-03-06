@@ -3,16 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="消火器株式会社の駐車場一覧。エリア別に検索できます。">
-    <title>駐車場一覧 | 消火器株式会社</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="アローパーキングの駐車場一覧。エリア別に検索できます。">
+    <title>駐車場一覧 | 株式会社アローパーキング</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif; 
+            line-height: 1.6; 
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #667eea;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .page-content {
+            padding: 2rem 0;
+        }
+        
+        .area-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .area-button {
+            padding: 0.75rem 2rem;
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .area-button:hover {
+            background: #f0f4ff;
+        }
+        .area-button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .parking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .parking-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .parking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* 画像スライド */
+        .parking-card-gallery {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #e0e0e0;
+            overflow: hidden;
+        }
+        .parking-card-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .parking-card-gallery img.active {
+            opacity: 1;
+        }
+        
+        /* スライド矢印 */
+        .card-gallery-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.5rem;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .parking-card:hover .card-gallery-nav {
+            opacity: 1;
+        }
+        .card-gallery-btn {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        .card-gallery-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        
+        /* インジケーター */
+        .card-gallery-indicators {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+        .card-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .card-indicator.active {
+            background: white;
+            width: 24px;
+            border-radius: 4px;
+        }
+        
+        .parking-card-content {
+            padding: 1.5rem;
+        }
+        .parking-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .parking-card .info {
+            margin: 0.5rem 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .parking-card .price {
+            background: #f0f4ff;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .parking-card .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0.3rem 0;
+            line-height: 1.4;
+        }
+        .parking-card .price-row .label {
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+        }
+        .parking-card .price-row .value {
+            text-align: right;
+            word-break: break-word;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+        .footer-contact {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-contact h3 {
+            margin-bottom: 1rem;
+        }
+        .phone-number {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        .phone-number a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .business-hours {
+            color: #bdc3c7;
+            margin: 0.5rem 0;
+        }
+        .btn-contact {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section li {
+            margin: 0.5rem 0;
+        }
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🅿️</span>
-                <span class="logo-text">消火器株式会社</span>
+                <img src="logo.png" alt="アローパーキング" style="width: 40px; height: 40px; border-radius: 50%;">
+                <span class="logo-text">アローパーキング</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">ホーム</a></li>
@@ -50,10 +358,10 @@
             <div class="footer-contact">
                 <h3>ご相談・お問い合わせ窓口</h3>
                 <p class="phone-number">
-                    <a href="tel:03-1234-5678">03-1234-5678</a>
+                    <a href="tel:03-5428-6822">03-5428-6822</a>
                 </p>
-                <p class="business-hours">営業時間：平日 9:00〜18:00</p>
-                <a href="mailto:info@shoukaki-parking.co.jp" class="btn-contact">
+                <p class="business-hours">営業時間：平日 9:30〜17:30</p>
+                <a href="mailto:info@arrow-parking.co.jp" class="btn-contact">
                     メールでのお問い合わせ
                 </a>
             </div>
@@ -71,20 +379,189 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>株式会社消火器</h4>
-                    <p>〒100-0001<br>東京都千代田区千代田1-1-1</p>
-                    <p>TEL: <a href="tel:03-1234-5678">03-1234-5678</a></p>
-                    <p>FAX: 03-1234-5679</p>
+                    <h4>株式会社アローパーキング</h4>
+                    <p>〒154-0041<br>東京都渋谷区神南1-20-15 神南101ビル5階</p>
+                    <p>TEL: <a href="tel:03-5428-6822">03-5428-6822</a></p>
+                    <p>FAX: 03-5428-6821</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 消火器株式会社. All rights reserved.</p>
+                <p>&copy; 2024 株式会社アローパーキング. All rights reserved.</p>
             </div>
         </div>
-    </footer> 
-    <script src="js/config.js"></script>
-    <script src="js/site.js"></script>
-    <script src="js/parkings.js"></script>
+    </footer>
+
+    <script>
+        const PARKINGS_DATA = 
+[ { "id": 1, "name": "アローパーキング赤坂", "prefecture": "東京都", "city": "港区", "address": "東京都港区赤坂4-5-21", "station": "赤坂見附駅", "capacity": 4, "price_per_hour": "30分/¥500", "price_per_day": "最大¥2,400/回（入庫から繰返有効、48h上限）", "latitude": 35.6795, "longitude": 139.7346, "features": "24時間営業,防犯カメラ,クレジットカード可,領収書発行可", "images": ["images/parking-1-1.jpg"], "description": "赤坂見附駅近く。ビジネスに最適です。" }, { "id": 2, "name": "アローパーキング赤堤", "prefecture": "東京都", "city": "世田谷区", "address": "東京都世田谷区赤堤4-12-13", "station": "松原駅", "capacity": 3, "price_per_hour": "30分/¥500", "price_per_day": "最大¥3,000/回（入庫から繰返有効、48h上限）", "latitude": 35.6595, "longitude": 139.6504, "features": "24時間営業,駅近,防犯カメラ,領収書発行可", "images": ["images/parking-2-1.jpg"], "description": "松原駅近く。住宅街で静かな環境です。" }, { "id": 3, "name": "アローパーキング阿佐ヶ谷第一", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区阿佐谷北1-8-12", "station": "阿佐ヶ谷駅", "capacity": 4, "price_per_hour": "30分/¥450", "price_per_day": "最大¥2,700/回（入庫から繰返有効、48h上限）", "latitude": 35.7048, "longitude": 139.6367, "features": "24時間営業,駅近,防犯カメラ,軽専用1台", "images": ["images/parking-3-1.jpg"], "description": "阿佐ヶ谷駅徒歩3分。商店街へのアクセス良好。内1台軽専用。" }, { "id": 4, "name": "アローパーキング阿佐ヶ谷第五", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区阿佐谷南3-34-17", "station": "阿佐ヶ谷駅", "capacity": 8, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から繰返有効、48h上限）", "latitude": 35.7030, "longitude": 139.6350, "features": "24時間営業,駅近,防犯カメラ,クレジットカード可", "images": ["images/parking-4-1.jpg"], "description": "阿佐ヶ谷駅徒歩2分。駅至近の好立地です。" }, { "id": 5, "name": "アローパーキング阿佐ヶ谷第六", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区阿佐谷南3-34-19", "station": "阿佐ヶ谷駅", "capacity": 4, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から繰返有効、48h上限）", "latitude": 35.7025, "longitude": 139.6355, "features": "24時間営業,防犯カメラ,クレジットカード可", "images": ["images/parking-5-1.jpg"], "description": "阿佐ヶ谷駅徒歩3分。24時間営業で便利です。" }, { "id": 6, "name": "アローパーキング井荻", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区井草3-9-1", "station": "井荻駅", "capacity": 9, "price_per_hour": "30分/¥600", "price_per_day": "最大¥3,600/回（入庫から繰返有効、48h上限）", "latitude": 35.7209, "longitude": 139.6149, "features": "24時間営業,駅近,防犯カメラ,クレジットカード可", "images": ["images/parking-6-1.jpg"], "description": "井荻駅徒歩2分。24h最大料金48時間繰返有効。" }, { "id": 7, "name": "アローパーキング梅丘", "prefecture": "東京都", "city": "世田谷区", "address": "東京都世田谷区梅丘1-42-1", "station": "梅ヶ丘駅", "capacity": 15, "price_per_hour": "30分/¥500", "price_per_day": "最大¥3,000/回（入庫から繰返有効、48h上限）", "latitude": 35.6512, "longitude": 139.6471, "features": "24時間営業,駅近,防犯カメラ,クレジットカード可,提携店割引", "images": ["images/parking-7-1.jpg"], "description": "梅ヶ丘駅徒歩3分。提携店割引あり。" }, { "id": 8, "name": "アローパーキング宇田川", "prefecture": "東京都", "city": "渋谷区", "address": "東京都渋谷区宇田川町15-1", "station": "JR渋谷駅", "capacity": 196, "price_per_hour": "8-20時:30分/¥400、20-8時:60分/¥100", "price_per_day": "平日最大¥3,200/12h（入庫から繰返適用、48h上限）、土日祝最大¥4,400/12h（入庫から繰返適用、48h上限）", "latitude": 35.6620, "longitude": 139.6977, "features": "24時間営業,機械式,防犯カメラ,クレジットカード可,電子マネー可,警備員常駐,オンライン予約,提携店割引", "images": ["images/parking-8-1.jpg", "images/parking-8-2.jpg", "images/parking-8-3.jpg"], "description": "渋谷駅徒歩5分。渋谷エリア最大級196台収容。警備員常駐で安心・安全。最大料金は12時間以内、繰返適用。48時間超駐車不可。", "price_detail": { "weekday_12h": "平日12時間最大 ¥3,200", "weekend_12h": "土日祝12時間最大 ¥4,400", "daytime": "8:00-20:00 → 30分¥400", "nighttime": "20:00-8:00 → 60分¥100" }, "payment_methods": ["現金", "クレジットカード", "交通系電子マネー", "iD", "QUICK Pay"], "vehicle_restrictions": { "height": "2.1m", "width": "1.8m", "length": "5.0m", "weight": "2.5t" } }, { "id": 9, "name": "アローパーキング永福町", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区永福2-51-1", "station": "永福町駅", "capacity": 5, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から繰返有効、48h上限）", "latitude": 35.6658, "longitude": 139.6443, "features": "24時間営業,防犯カメラ", "images": ["images/parking-9-1.jpg"], "description": "永福町駅徒歩5分。住宅街の静かな環境です。" }, { "id": 10, "name": "アローパーキング永福町第二", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区永福4-4-16", "station": "永福町駅", "capacity": 6, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から1回限り有効）", "latitude": 35.6665, "longitude": 139.6450, "features": "24時間営業,防犯カメラ", "images": ["images/parking-10-1.jpg"], "description": "永福町駅徒歩6分。最大料金は入庫から1回限り有効。" }, { "id": 11, "name": "アローパーキング大崎", "prefecture": "東京都", "city": "品川区", "address": "東京都品川区大崎5-1-5 高徳ビル", "station": "大崎駅", "capacity": 11, "price_per_hour": "30分/¥500", "price_per_day": "最大¥3,000/12h（入庫から繰返適用、48h上限）", "latitude": 35.6197, "longitude": 139.7286, "features": "24時間営業,駅近,防犯カメラ,クレジットカード可", "images": ["images/parking-11-1.jpg"], "description": "大崎駅近く。最大料金12時間以内、48時間繰返適用。" }, { "id": 12, "name": "アローパーキング成城", "prefecture": "東京都", "city": "世田谷区", "address": "東京都世田谷区成城2-33-18", "station": "成城学園前駅", "capacity": 19, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から1回限り有効）", "latitude": 35.6415, "longitude": 139.6024, "features": "24時間営業,駅近,防犯カメラ,提携店割引", "images": ["images/parking-12-1.jpg"], "description": "成城学園前駅近く。提携店割引あり。最大料金1回限り有効。" }, { "id": 13, "name": "アローパーキング中野本町", "prefecture": "東京都", "city": "中野区", "address": "東京都中野区本町2-2-1", "station": "中野坂上駅", "capacity": 5, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から1回限り有効）", "latitude": 35.6937, "longitude": 139.6731, "features": "24時間営業,防犯カメラ", "images": ["images/parking-13-1.jpg"], "description": "中野坂上駅徒歩7分。最大料金1回限り有効。" }, { "id": 14, "name": "アローパーキング成田東", "prefecture": "東京都", "city": "杉並区", "address": "東京都杉並区成田東5-29-3", "station": "南阿佐ヶ谷駅", "capacity": 7, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回（入庫から繰返有効、48h上限）", "latitude": 35.7025, "longitude": 139.6455, "features": "24時間営業,防犯カメラ,クレジットカード可", "images": ["images/parking-14-1.jpg"], "description": "南阿佐ヶ谷駅徒歩8分。住宅街の駐車場です。" }, { "id": 15, "name": "アローパーキング日本橋浜町", "prefecture": "東京都", "city": "中央区", "address": "東京都中央区日本橋浜町1-1-5", "station": "浜町駅", "capacity": 9, "price_per_hour": "30分/¥600", "price_per_day": "最大¥3,600/回（入庫から繰返有効、48h上限）", "latitude": 35.6858, "longitude": 139.7845, "features": "24時間営業,駅近,防犯カメラ,クレジットカード可", "images": ["images/parking-15-1.jpg"], "description": "浜町駅徒歩3分。日本橋エリアに便利です。" }, { "id": 16, "name": "アローパーキング百人町第一", "prefecture": "東京都", "city": "新宿区", "address": "東京都新宿区百人町2-3-20", "station": "新大久保駅", "capacity": 3, "price_per_hour": "月～金 8-24時:15分/¥300、24-8時:60分/¥200、土日祝 8-24時:15分/¥400、24-8時:60分/¥200", "price_per_day": "最大¥2,400/回（入庫から繰返有効、48h上限）", "latitude": 35.7012, "longitude": 139.7006, "features": "24時間営業,防犯カメラ,クレジットカード可,領収書発行可,休止中", "images": ["images/parking-16-1.jpg"], "description": "新大久保駅近く。現在休止中です。再開時期は未定。" }, { "id": 17, "name": "アローパーキング玉川", "prefecture": "東京都", "city": "世田谷区", "address": "東京都世田谷区玉川4-7-5", "station": "二子玉川駅", "capacity": 3, "price_per_hour": "30分/¥500", "price_per_day": "最大¥3,000/回（入庫から繰返有効、48h上限）", "latitude": 35.6115, "longitude": 139.6270, "features": "24時間営業,駅近,防犯カメラ", "images": ["images/parking-17-1.jpg"], "description": "二子玉川駅近く。最大料金48時間繰返有効。" }, { "id": 18, "name": "アローパーキング早稲田", "prefecture": "東京都", "city": "新宿区", "address": "東京都新宿区馬場下町63番", "station": "早稲田駅", "capacity": 10, "price_per_hour": "30分/¥500", "price_per_day": "昼最大¥2,500×2回、夜最大¥400×2回（各2回限り有効）", "latitude": 35.7086, "longitude": 139.7192, "features": "24時間営業,駅近,防犯カメラ,クレジットカード可", "images": ["images/parking-18-1.jpg"], "description": "早稲田駅徒歩4分。昼・夜最大料金を各2回限り有効。" }, { "id": 19, "name": "アローパーキング赤羽北第一", "prefecture": "東京都", "city": "北区", "address": "東京都北区赤羽北1-25-39", "station": "赤羽駅", "capacity": 4, "price_per_hour": "30分/¥300", "price_per_day": "最大¥1,800/回（入庫から1回限り有効）", "latitude": 35.7774, "longitude": 139.7202, "features": "24時間営業,防犯カメラ", "images": ["images/parking-19-1.jpg"], "description": "赤羽駅近く。最大料金1回限り有効。" }, { "id": 20, "name": "アローパーキング仙台中央", "prefecture": "宮城県", "city": "仙台市青葉区", "address": "宮城県仙台市青葉区中央4-2-27", "station": "仙台駅", "capacity": 18, "price_per_hour": "30分/¥300", "price_per_day": "最大¥1,800/回（入庫から繰返有効、48h上限）", "latitude": 38.2606, "longitude": 140.8819, "features": "24時間営業,駅近,防犯カメラ,高さ制限1.9m", "images": ["images/parking-20-1.jpg"], "description": "仙台駅近く。普通車10台+小型車8台。最大料金繰返有効、48時間まで。" }, { "id": 21, "name": "アローパーキング浪花町", "prefecture": "大阪府", "city": "大阪市北区", "address": "大阪府大阪市北区浪花町12-14", "station": "天満駅", "capacity": 2, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回", "latitude": 34.6978, "longitude": 135.5104, "features": "24時間営業,防犯カメラ", "images": ["images/parking-21-1.jpg"], "description": "天満駅近く。北区の小規模駐車場です。" }, { "id": 22, "name": "アローパーキング生玉神社前", "prefecture": "大阪府", "city": "大阪市天王寺区", "address": "大阪府大阪市天王寺区生玉6番", "station": "谷町九丁目駅", "capacity": 3, "price_per_hour": "30分/¥400", "price_per_day": "最大¥2,400/回", "latitude": 34.6695, "longitude": 135.5187, "features": "24時間営業,防犯カメラ", "images": ["images/parking-22-1.jpg"], "description": "生玉神社近く。天王寺区の駐車場です。" }, { "id": 23, "name": "アローパーキング東難波", "prefecture": "兵庫県", "city": "尼崎市", "address": "兵庫県尼崎市東難波町5-1", "station": "尼崎駅", "capacity": 11, "price_per_hour": "9-23時:30分/¥100、23-9時:60分/¥100", "price_per_day": "最大¥900/24h", "latitude": 34.7228, "longitude": 135.4053, "features": "24時間営業,防犯カメラ", "images": ["images/parking-23-1.jpg"], "description": "尼崎駅徒歩5分。地域密着型の駐車場です。" } ] ;
+        
+        let allParkings = [];
+        let filteredParkings = [];
+        let cardImageIndices = {};
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeParkings();
+            setupAreaButtons();
+            
+            const params = new URLSearchParams(window.location.search);
+            const prefecture = params.get('prefecture');
+            if (prefecture) {
+                filterByPrefecture(prefecture);
+            }
+        });
+
+        function initializeParkings() {
+            allParkings = PARKINGS_DATA;
+            filteredParkings = [...allParkings];
+            
+            // 各カードの画像インデックスを初期化
+            allParkings.forEach(p => {
+                cardImageIndices[p.id] = 0;
+            });
+            
+            displayParkings(filteredParkings);
+            updateResultCount(filteredParkings.length);
+        }
+
+        function displayParkings(parkings) {
+            const grid = document.getElementById('parkingGrid');
+            
+            if (parkings.length === 0) {
+                grid.innerHTML = '<div style="text-align: center; padding: 60px 20px; color: #666;">該当する駐車場がありません</div>';
+                return;
+            }
+            
+            grid.innerHTML = parkings.map(parking => createParkingCard(parking)).join('');
+        }
+
+        function createParkingCard(parking) {
+            const detailLink = parking.id === 8 ? 'udagawa.html' : `parking-detail.html?id=${parking.id}`;
+            const images = parking.images && parking.images.length > 0 ? parking.images : ['https://via.placeholder.com/350x200?text=No+Image'];
+            
+            // 画像ギャラリー
+            const galleryHTML = `
+                <div class="parking-card-gallery" id="gallery-${parking.id}">
+                    ${images.map((img, index) => `
+                        <img src="${img}" alt="${parking.name} - 写真${index + 1}" 
+                             class="${index === 0 ? 'active' : ''}" 
+                             onerror="this.src='https://via.placeholder.com/350x200?text=No+Image'">
+                    `).join('')}
+                    
+                    ${images.length > 1 ? `
+                        <div class="card-gallery-nav">
+                            <button class="card-gallery-btn" onclick="prevCardImage(${parking.id}); event.preventDefault();">‹</button>
+                            <button class="card-gallery-btn" onclick="nextCardImage(${parking.id}); event.preventDefault();">›</button>
+                        </div>
+                        <div class="card-gallery-indicators">
+                            ${images.map((_, index) => `
+                                <div class="card-indicator ${index === 0 ? 'active' : ''}" 
+                                     onclick="showCardImage(${parking.id}, ${index}); event.preventDefault();"></div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+            
+            return `
+                <div class="parking-card">
+                    ${galleryHTML}
+                    <div class="parking-card-content">
+                        <h3>${parking.name}</h3>
+                        <div class="info">📍 ${parking.address}</div>
+                        <div class="info">🚗 収容台数: ${parking.capacity}台</div>
+                        <div class="info">🚃 ${parking.station}</div>
+                        <div class="price">
+                            <div class="price-row">
+                                <span class="label">💰 時間料金:</span>
+                                <span class="value">${parking.price_per_hour}</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="label">📅 最大料金:</span>
+                                <span class="value">${parking.price_per_day}</span>
+                            </div>
+                        </div>
+                        <a href="${detailLink}" class="btn btn-primary">詳細を見る</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showCardImage(parkingId, index) {
+            const gallery = document.getElementById(`gallery-${parkingId}`);
+            if (!gallery) return;
+            
+            const images = gallery.querySelectorAll('img');
+            const indicators = gallery.querySelectorAll('.card-indicator');
+            
+            images.forEach(img => img.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+            
+            if (images[index]) images[index].classList.add('active');
+            if (indicators[index]) indicators[index].classList.add('active');
+            
+            cardImageIndices[parkingId] = index;
+        }
+
+        function nextCardImage(parkingId) {
+            const gallery = document.getElementById(`gallery-${parkingId}`);
+            if (!gallery) return;
+            
+            const images = gallery.querySelectorAll('img');
+            const currentIndex = cardImageIndices[parkingId] || 0;
+            const nextIndex = (currentIndex + 1) % images.length;
+            
+            showCardImage(parkingId, nextIndex);
+        }
+
+        function prevCardImage(parkingId) {
+            const gallery = document.getElementById(`gallery-${parkingId}`);
+            if (!gallery) return;
+            
+            const images = gallery.querySelectorAll('img');
+            const currentIndex = cardImageIndices[parkingId] || 0;
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            
+            showCardImage(parkingId, prevIndex);
+        }
+
+        function setupAreaButtons() {
+            const buttons = document.querySelectorAll('.area-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const prefecture = button.dataset.prefecture;
+                    filterByPrefecture(prefecture);
+                });
+            });
+        }
+
+        function filterByPrefecture(prefecture) {
+            if (prefecture) {
+                filteredParkings = allParkings.filter(p => p.prefecture === prefecture);
+                document.querySelectorAll('.area-button').forEach(b => {
+                    if (b.dataset.prefecture === prefecture) {
+                        b.classList.add('active');
+                    } else {
+                        b.classList.remove('active');
+                    }
+                });
+            } else {
+                filteredParkings = [...allParkings];
+            }
+            
+            displayParkings(filteredParkings);
+            updateResultCount(filteredParkings.length);
+        }
+
+        function updateResultCount(count) {
+            const element = document.getElementById('resultCount');
+            if (element) {
+                element.textContent = `${count}件の駐車場`;
+            }
+        }
+    </script>
 </body>
 </html>

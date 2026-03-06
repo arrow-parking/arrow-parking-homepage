@@ -3,7 +3,7 @@ const SITE_CONFIG = {
     company: {
         name: "株式会社アローパーキング",
         nameEn: "Corporation arrowparking",
-        established: "2020年4月1日",
+        established: "S61.3",
         ceo: "代表取締役社長 尾崎　陽介",
         description: "安心・安全な駐車場サービスを通じて、お客様の快適なカーライフをサポートしています。"
     },
@@ -12,9 +12,9 @@ const SITE_CONFIG = {
     contact: {
         phone: "03-5428-6822",
         phoneDisplay: "03-5428-6822",
-        fax: "03-5428-6822",
-        email: "info@shoukaki-parking.co.jp",
-        businessHours: "平日 9:00〜18:00"
+        fax: "03-5428-6821",
+        email: "arrow-parking.jp",
+        businessHours: "平日 9:30〜17:30"
     },
 
     // 住所
@@ -24,7 +24,7 @@ const SITE_CONFIG = {
         city: "渋谷区",
         street: "神南1-20-15",
         full: "東京都渋谷区神南1-20-15 神南101ビル",
-        postal: "〒100-0001"  // site.jsで使用
+        postal: "〒150-0041"  // site.jsで使用
     },
 
     // 事業情報

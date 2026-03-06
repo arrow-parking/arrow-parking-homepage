@@ -3,17 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="消火器株式会社へのお問い合わせ。メール・電話でお気軽にご連絡ください。">
-    <title>お問い合わせ | 消火器株式会社</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>お問い合わせ | 株式会社アローパーキング</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif; 
+            line-height: 1.8; 
+            color: #333;
+            background: #f5f7fa;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .nav-menu a:hover, .nav-menu a.active {
+            opacity: 0.8;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .page-content {
+            padding: 4rem 0;
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        .contact-info h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .contact-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .contact-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .contact-card p {
+            margin: 0.5rem 0;
+        }
+        .contact-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .company-details {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .company-details h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .detail-row {
+            display: flex;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        .detail-label {
+            width: 150px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .detail-value {
+            flex: 1;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+        .footer-contact {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-contact h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .phone-number {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        .phone-number a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .business-hours {
+            color: #bdc3c7;
+            margin: 0.5rem 0;
+        }
+        .btn-contact {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        .btn-contact:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section li {
+            margin: 0.5rem 0;
+        }
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+    </style>
 </head>
 <body>
-    <!-- ナビゲーション -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🅿️</span>
-                <span class="logo-text">消火器株式会社</span>
+                <img src="logo.png" alt="アローパーキング" style="width: 40px; height: 40px; border-radius: 50%;">
+                <span class="logo-text">アローパーキング</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">ホーム</a></li>
@@ -25,89 +239,89 @@
         </div>
     </nav>
 
-    <!-- ページヘッダー -->
     <div class="page-header">
         <div class="container">
             <h1>お問い合わせ</h1>
-            <p class="subtitle">Contact Us</p>
+            <p>Contact Us</p>
         </div>
     </div>
 
-    <!-- メインコンテンツ -->
     <main class="container page-content">
-        <!-- イントロ -->
-        <div class="contact-intro">
-            <h2>お気軽にお問い合わせください</h2>
-            <p>駐車場のご予約・ご利用に関するお問い合わせは、メールまたはお電話にて承ります。</p>
+        <div class="contact-info">
+            <h2>お問い合わせ方法</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                駐車場のご利用、土地活用のご相談など、お気軽にお問い合わせください。
+            </p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <h3>お電話でのお問い合わせ</h3>
+                    <p>
+                        <a href="tel:03-5428-6822">03-5428-6822</a>
+                    </p>
+                    <p style="color: #666;">営業時間：平日 9:30〜17:30</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon">📧</div>
+                    <h3>メールでのお問い合わせ</h3>
+                    <p>
+                        <a href="mailto:info@arrow-parking.co.jp">info@arrow-parking.co.jp</a>
+                    </p>
+                    <p style="color: #666;">24時間受付</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon">📠</div>
+                    <h3>FAXでのお問い合わせ</h3>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #667eea;">03-5428-6821</p>
+                    <p style="color: #666;">24時間受付</p>
+                </div>
+            </div>
         </div>
 
-        <!-- お問い合わせ方法 -->
-        <div class="contact-methods">
-            <div class="contact-card">
-                <div class="contact-icon">📧</div>
-                <h3>メールでのお問い合わせ</h3>
-                <p>以下のメールアドレス宛にお問い合わせください</p>
-                <a href="mailto:info@shoukaki-parking.co.jp?subject=駐車場に関するお問い合わせ" class="btn btn-primary">
-                    info@shoukaki-parking.co.jp
-                </a>
-                <p class="note">※24時間以内にご返信いたします</p>
+        <div class="company-details">
+            <h2>会社情報</h2>
+            <div class="detail-row">
+                <div class="detail-label">会社名</div>
+                <div class="detail-value">株式会社アローパーキング</div>
             </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">📞</div>
-                <h3>お電話でのお問い合わせ</h3>
-                <p>受付時間：平日 9:00〜18:00</p>
-                <div class="phone-number">
-                    <a href="tel:03-1234-5678">03-1234-5678</a>
+            <div class="detail-row">
+                <div class="detail-label">所在地</div>
+                <div class="detail-value">
+                    〒154-0041<br>
+                    東京都渋谷区神南1-20-15 神南101ビル5階
                 </div>
-                <p class="note">※土日祝日は休業</p>
             </div>
-        </div>
-
-        <!-- FAQ -->
-        <div class="faq-section">
-            <h2>よくあるご質問</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4>Q. 予約は必要ですか？</h4>
-                    <p>A. 予約不要です。24時間いつでもご利用いただけます。</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. 支払い方法は？</h4>
-                    <p>A. 現金、各種クレジットカード、電子マネーがご利用いただけます。</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. 大型車も駐車できますか？</h4>
-                    <p>A. 一部の駐車場で大型車に対応しています。詳しくは各駐車場ページをご確認ください。</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. EV充電設備はありますか？</h4>
-                    <p>A. 主要拠点でEV充電設備を完備しています。各駐車場の詳細ページでご確認ください。</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. 領収書は発行できますか？</h4>
-                    <p>A. はい、駐車場の精算機にて領収書を発行できます。</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. 月極契約はできますか？</h4>
-                    <p>A. 一部の駐車場で月極契約も承っております。お問い合わせください。</p>
-                </div>
+            <div class="detail-row">
+                <div class="detail-label">電話番号</div>
+                <div class="detail-value">03-5428-6822</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">FAX番号</div>
+                <div class="detail-value">03-5428-6821</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">メール</div>
+                <div class="detail-value">info@arrow-parking.co.jp</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">営業時間</div>
+                <div class="detail-value">平日 9:30〜17:30</div>
             </div>
         </div>
     </main>
 
-    <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="footer-contact">
                 <h3>ご相談・お問い合わせ窓口</h3>
                 <p class="phone-number">
-                    <a href="tel:03-1234-5678">03-1234-5678</a>
+                    <a href="tel:03-5428-6822">03-5428-6822</a>
                 </p>
-                <p class="business-hours">営業時間：平日 9:00〜18:00</p>
-                <a href="mailto:info@shoukaki-parking.co.jp" class="btn-contact">
-                    メールでのお問い合わせ
-                </a>
+                <p class="business-hours">営業時間：平日 9:30〜17:30</p>
+                <a href="mailto:info@arrow-parking.co.jp" class="btn-contact">メールでのお問い合わせ</a>
             </div>
             
             <div class="footer-content">
@@ -123,19 +337,17 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>株式会社消火器</h4>
-                    <p>〒100-0001<br>東京都千代田区千代田1-1-1</p>
-                    <p>TEL: <a href="tel:03-1234-5678">03-1234-5678</a></p>
-                    <p>FAX: 03-1234-5679</p>
+                    <h4>株式会社アローパーキング</h4>
+                    <p>〒154-0041<br>東京都渋谷区神南1-20-15 神南101ビル5階</p>
+                    <p>TEL: <a href="tel:03-5428-6822">03-5428-6822</a></p>
+                    <p>FAX: 03-5428-6821</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 消火器株式会社. All rights reserved.</p>
+                <p>&copy; 2024 株式会社アローパーキング. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="js/config.js"></script>
-    <script src="js/site.js"></script>
 </body>
 </html>

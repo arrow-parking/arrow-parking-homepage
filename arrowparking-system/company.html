@@ -3,17 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="消火器株式会社の会社概要。企業情報、理念、沿革をご紹介します。">
-    <title>会社概要 | 消火器株式会社</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="株式会社アローパーキングの会社概要。30年以上の実績で駐車場運営をサポートします。">
+    <title>会社概要 | 株式会社アローパーキング</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif; 
+            line-height: 1.7; 
+            color: #333;
+            background: #f5f7fa;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        .page-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 4rem 0;
+        }
+        
+        .company-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        .company-info h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .info-table {
+            width: 100%;
+        }
+        .info-row {
+            display: flex;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 150px;
+            flex-shrink: 0;
+        }
+        .info-value {
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .history {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .history h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-content {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+        .footer-contact {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-contact h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .phone-number {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+        .phone-number a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .business-hours {
+            color: #bdc3c7;
+            margin: 0.5rem 0;
+        }
+        .btn-contact {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        .btn-contact:hover {
+            background: #5568d3;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section li {
+            margin: 0.5rem 0;
+        }
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+    </style>
 </head>
 <body>
-    <!-- ナビゲーション -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🅿️</span>
-                <span class="logo-text">消火器株式会社</span>
+                <img src="logo.png" alt="アローパーキング" style="width: 40px; height: 40px; border-radius: 50%;">
+                <span class="logo-text">アローパーキング</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">ホーム</a></li>
@@ -25,7 +251,6 @@
         </div>
     </nav>
 
-    <!-- ページヘッダー -->
     <div class="page-header">
         <div class="container">
             <h1>会社概要</h1>
@@ -33,117 +258,82 @@
         </div>
     </div>
 
-    <!-- メインコンテンツ -->
-    <main class="container page-content">
-        <!-- 会社情報 -->
-        <section class="company-info">
-            <h2>消火器株式会社について</h2>
-            <p class="lead">
-                私たち消火器株式会社は、安心・安全な駐車場サービスを通じて、<br>
-                お客様の快適なカーライフをサポートしています。
-            </p>
-
-            <div class="info-table">
-                <table>
-                    <tr>
-                        <th>会社名</th>
-                        <td>消火器株式会社</td>
-                    </tr>
-                    <tr>
-                        <th>設立</th>
-                        <td>2020年4月1日</td>
-                    </tr>
-                    <tr>
-                        <th>代表者</th>
-                        <td>代表取締役社長 山田 太郎</td>
-                    </tr>
-                    <tr>
-                        <th>本社所在地</th>
-                        <td>〒100-0001 東京都千代田区千代田1-1-1</td>
-                    </tr>
-                    <tr>
-                        <th>事業内容</th>
-                        <td>駐車場の運営・管理</td>
-                    </tr>
-                    <tr>
-                        <th>駐車場数</th>
-                        <td>全国8拠点</td>
-                    </tr>
-                    <tr>
-                        <th>総収容台数</th>
-                        <td>215台</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <!-- 企業理念 -->
-        <section class="mission-section">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">企業理念</h2>
-            <div class="mission-grid">
-                <div class="mission-card">
-                    <h3>🎯 ミッション</h3>
-                    <p>安心・安全な駐車場サービスを提供し、お客様の快適なカーライフに貢献します</p>
-                </div>
-                <div class="mission-card">
-                    <h3>👁️ ビジョン</h3>
-                    <p>全国No.1の顧客満足度を誇る駐車場サービス企業を目指します</p>
-                </div>
-                <div class="mission-card">
-                    <h3>💎 バリュー</h3>
-                    <p>誠実・安全・革新を大切にし、常にお客様目線でサービスを向上させます</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 沿革 -->
-        <section class="history-section">
-            <h2>沿革</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">2020年</div>
-                    <div class="timeline-content">
-                        <h4>4月</h4>
-                        <p>消火器株式会社設立、東京都内に1号店オープン</p>
+    <div class="content">
+        <div class="container">
+            <div class="company-info">
+                <h2>会社情報</h2>
+                <div class="info-table">
+                    <div class="info-row">
+                        <div class="info-label">商号</div>
+                        <div class="info-value">株式会社アローパーキング</div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2021年</div>
-                    <div class="timeline-content">
-                        <h4>6月</h4>
-                        <p>神奈川県横浜市に進出</p>
+                    <div class="info-row">
+                        <div class="info-label">本社所在地</div>
+                        <div class="info-value">
+                            〒154-0041<br>
+                            東京都渋谷区神南1-20-15 神南101ビル5階
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2023年</div>
-                    <div class="timeline-content">
-                        <h4>3月</h4>
-                        <p>大阪・名古屋エリアに進出</p>
+                    <div class="info-row">
+                        <div class="info-label">電話番号</div>
+                        <div class="info-value">03-5428-6822</div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2025年</div>
-                    <div class="timeline-content">
-                        <h4>9月</h4>
-                        <p>福岡エリアに進出、全国8拠点体制を確立</p>
+                    <div class="info-row">
+                        <div class="info-label">FAX番号</div>
+                        <div class="info-value">03-5428-6821</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">営業時間</div>
+                        <div class="info-value">平日 9:30〜17:30（土日祝日休業）</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">事業内容</div>
+                        <div class="info-value">
+                            時間貸駐車場の運営・管理<br>
+                            駐車場設備の企画・設計・施工<br>
+                            土地活用コンサルティング
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- フッター -->
+            <div class="history">
+                <h2>沿革</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1986年3月（昭和61年3月）</div>
+                        <div class="timeline-content">株式会社アローパーキング設立</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1995年7月17日（平成7年7月17日）</div>
+                        <div class="timeline-content">本店移転（自由が丘）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1999年11月11日（平成11年11月11日）</div>
+                        <div class="timeline-content">大阪にて時間貸駐車場業務開始</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2006年9月（平成18年9月）</div>
+                        <div class="timeline-content">新ロゴマーク導入</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017年12月（平成29年12月）</div>
+                        <div class="timeline-content">管理駐車台数396台達成</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-contact">
                 <h3>ご相談・お問い合わせ窓口</h3>
                 <p class="phone-number">
-                    <a href="tel:03-1234-5678">03-1234-5678</a>
+                    <a href="tel:03-5428-6822">03-5428-6822</a>
                 </p>
-                <p class="business-hours">営業時間：平日 9:00〜18:00</p>
-                <a href="mailto:info@shoukaki-parking.co.jp" class="btn-contact">
-                    メールでのお問い合わせ
-                </a>
+                <p class="business-hours">営業時間：平日 9:30〜17:30</p>
+                <a href="mailto:info@arrow-parking.co.jp" class="btn-contact">メールでのお問い合わせ</a>
             </div>
             
             <div class="footer-content">
@@ -159,19 +349,17 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>株式会社消火器</h4>
-                    <p>〒100-0001<br>東京都千代田区千代田1-1-1</p>
-                    <p>TEL: <a href="tel:03-1234-5678">03-1234-5678</a></p>
-                    <p>FAX: 03-1234-5679</p>
+                    <h4>株式会社アローパーキング</h4>
+                    <p>〒154-0041<br>東京都渋谷区神南1-20-15 神南101ビル5階</p>
+                    <p>TEL: <a href="tel:03-5428-6822">03-5428-6822</a></p>
+                    <p>FAX: 03-5428-6821</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 消火器株式会社. All rights reserved.</p>
+                <p>&copy; 2024 株式会社アローパーキング. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="js/config.js"></script>
-    <script src="js/site.js"></script>
 </body>
 </html>
