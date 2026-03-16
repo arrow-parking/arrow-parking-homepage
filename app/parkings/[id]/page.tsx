@@ -389,11 +389,11 @@ export default async function ParkingDetailPage({ params }: ParkingDetailPagePro
 
                   <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                     <a
-                      href="tel:03-3770-2017"
+                      href="tel:03-5428-6822"
                       className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-blue-900 transition-all hover:bg-blue-50"
                     >
-                      📞 管理人室に相談する<br />
-                      <span className="text-sm font-normal">03-3770-2017</span>
+                      📞 電話で相談<br />
+                      <span className="text-sm font-normal">03-5428-6822</span>
                     </a>
                     <Link
                       href="/contact"

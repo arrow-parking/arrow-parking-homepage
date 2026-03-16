@@ -7,7 +7,7 @@ const parkings = parkingsData as Parking[];
 
 export const metadata: Metadata = {
   title: "ホーム",
-  description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・防犯カメラ完備・クレジットカード対応。",
+  description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・クレジットカード対応。",
   openGraph: {
     title: "アローパーキング | 安心と信頼の駐車場運営",
     description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績。",
@@ -95,7 +95,7 @@ export default function HomePage() {
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-blue-100 sm:text-xl">
               東京・大阪・宮城で23箇所、396台の駐車場を運営。<br />
-              24時間営業・防犯カメラ完備で安心してご利用いただけます。
+              24時間営業で安心してご利用いただけます。
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
@@ -185,11 +185,11 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
-                <span className="text-3xl">📹</span>
+                <span className="text-3xl">🚶</span>
               </div>
-              <h3 className="mb-2 text-xl font-bold text-gray-900">防犯カメラ完備</h3>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">駅近・好立地</h3>
               <p className="text-gray-600">
-                全駐車場に防犯カメラを設置。大切なお車をしっかり守ります。
+                多くの駐車場が駅から徒歩5〜10分。アクセス抜群で便利です。
               </p>
             </div>
             <div className="text-center">

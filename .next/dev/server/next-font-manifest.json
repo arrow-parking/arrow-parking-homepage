@@ -1,12 +1,15 @@
 {
   "app": {
-    "[project]/app/company/page": [
-      "static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2"
-    ],
     "[project]/app/contact/page": [
       "static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2"
     ],
+    "[project]/app/landowner/page": [
+      "static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2"
+    ],
     "[project]/app/page": [
+      "static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2"
+    ],
+    "[project]/app/parkings/[id]/page": [
       "static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2"
     ],
     "[project]/app/parkings/page": [

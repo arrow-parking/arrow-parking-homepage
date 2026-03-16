@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,9 +9,11 @@ export function Footer() {
           {/* 会社情報 */}
           <div className="md:col-span-2">
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-900 to-blue-700">
-                <span className="text-xl font-bold text-white">AP</span>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="アローパーキング ロゴ" 
+                className="h-10 w-10"
+              />
               <div>
                 <div className="text-sm font-bold text-gray-900">株式会社アローパーキング</div>
                 <div className="text-xs text-gray-600">Arrow Parking Co., Ltd.</div>

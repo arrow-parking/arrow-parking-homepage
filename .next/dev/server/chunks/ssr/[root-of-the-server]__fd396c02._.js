@@ -30,7 +30,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$parkings$2e$json__$2
 const parkings = __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$parkings$2e$json__$28$json$29$__["default"];
 const metadata = {
     title: "ホーム",
-    description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・防犯カメラ完備・クレジットカード対応。",
+    description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・クレジットカード対応。",
     openGraph: {
         title: "アローパーキング | 安心と信頼の駐車場運営",
         description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績。",
@@ -160,7 +160,7 @@ function HomePage() {
                                             lineNumber: 97,
                                             columnNumber: 41
                                         }, this),
-                                        "24時間営業・防犯カメラ完備で安心してご利用いただけます。"
+                                        "24時間営業で安心してご利用いただけます。"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/page.tsx",
@@ -473,7 +473,7 @@ function HomePage() {
                                             className: "mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-3xl",
-                                                children: "📹"
+                                                children: "🚶"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
                                                 lineNumber: 188,
@@ -486,7 +486,7 @@ function HomePage() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                             className: "mb-2 text-xl font-bold text-gray-900",
-                                            children: "防犯カメラ完備"
+                                            children: "駅近・好立地"
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
                                             lineNumber: 190,
@@ -494,7 +494,7 @@ function HomePage() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-gray-600",
-                                            children: "全駐車場に防犯カメラを設置。大切なお車をしっかり守ります。"
+                                            children: "多くの駐車場が駅から徒歩5〜10分。アクセス抜群で便利です。"
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
                                             lineNumber: 191,
