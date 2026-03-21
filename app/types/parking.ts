@@ -19,4 +19,7 @@ export interface Parking {
   parking_type?: string;
   receiptPhoneNumber?: string;
   receiptOfficeName?: string;
+  priceDetail?: string;
 }
+
+

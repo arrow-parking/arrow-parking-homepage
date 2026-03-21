@@ -10,6 +10,8 @@ type ParkingGalleryProps = {
 export function ParkingGallery({ images, name }: ParkingGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  console.log(`ParkingGallery: ${name}`, { images, currentIndex });
+
   const next = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
@@ -35,13 +37,17 @@ export function ParkingGallery({ images, name }: ParkingGalleryProps) {
     <div className="relative">
       {/* メイン画像 */}
       <div className="relative h-96 overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-gray-50">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <div className="text-7xl font-bold text-blue-900/10">🅿️</div>
-            <div className="mt-4 text-sm text-gray-400">写真準備中</div>
-            <div className="mt-2 text-xs text-gray-400">{images[currentIndex]}</div>
-          </div>
-        </div>
+        <img
+          src={images[currentIndex]}
+          alt={`${name} - 画像 ${currentIndex + 1}`}
+          className="h-full w-full object-cover"
+          onError={(e) => {
+            console.error(`画像読み込みエラー: ${images[currentIndex]}`);
+          }}
+          onLoad={() => {
+            console.log(`画像読み込み成功: ${images[currentIndex]}`);
+          }}
+        />
 
         {/* ナビゲーション */}
         {images.length > 1 && (
@@ -109,9 +115,14 @@ export function ParkingGallery({ images, name }: ParkingGalleryProps) {
                   : "opacity-60 hover:opacity-100"
               }`}
             >
-              <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-50 to-gray-50">
-                <span className="text-xs text-gray-400">{index + 1}</span>
-              </div>
+              <img
+                src={image}
+                alt={`${name} - サムネイル ${index + 1}`}
+                className="h-full w-full object-cover"
+                onError={() => {
+                  console.error(`サムネイル読み込みエラー: ${image}`);
+                }}
+              />
             </button>
           ))}
         </div>

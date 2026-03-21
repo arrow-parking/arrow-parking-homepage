@@ -20,7 +20,7 @@ export default function CompanyPage() {
     { date: "1995年7月17日", event: "本店移転（自由が丘）" },
     { date: "1999年11月11日", event: "大阪にて時間貸駐車場業務開始" },
     { date: "2006年9月", event: "新ロゴマーク導入" },
-    { date: "2017年12月", event: "管理駐車台数396台達成" },
+    { date: "2017年12月", event: "管理駐車台数359台達成" },
   ];
 
   return (
