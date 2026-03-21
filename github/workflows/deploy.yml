@@ -27,21 +27,18 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-          cache-dependency-path: ap.pages/pnpm-lock.yaml
 
       - name: Install dependencies
-        working-directory: ap.pages
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        working-directory: ap.pages
         env:
-          NEXT_PUBLIC_BASE_PATH: /ap.pages
+          NEXT_PUBLIC_BASE_PATH: /arrow-parking
         run: pnpm build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ap.pages/out
+          path: out
 
   deploy:
     needs: build
