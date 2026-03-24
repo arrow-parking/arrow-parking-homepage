@@ -27,7 +27,6 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm" aria-label="メインナビゲーション">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* ロゴ */}
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
             <Image
               src={`${basePath}/logo.png`}
@@ -42,7 +41,6 @@ export function Navbar() {
             </div>
           </Link>
 
-          {/* デスクトップナビ */}
           <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <Link
@@ -68,7 +66,6 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* モバイルメニューボタン */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-600 hover:text-gray-900"
@@ -91,7 +88,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* モバイルメニュー */}
       {mobileMenuOpen && (
         <div className="border-t border-gray-200 bg-white md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
