@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { Parking } from "@/app/types/parking";
 
@@ -6,6 +8,9 @@ interface ParkingCardProps {
 }
 
 export function ParkingCard({ parking }: ParkingCardProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const imageUrl = `${basePath}${parking.images[0]}`;
+
   return (
     <Link href={`/parkings/${parking.id}`} className="group block">
       <div className="overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-md">
@@ -13,9 +18,10 @@ export function ParkingCard({ parking }: ParkingCardProps) {
         <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
           {parking.images.length > 0 ? (
             <img
-              src={parking.images[0]}
+              src={imageUrl}
               alt={parking.name}
               className="h-full w-full object-cover transition-transform group-hover:scale-105"
+              loading="lazy"
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center text-gray-400">
@@ -42,7 +48,6 @@ export function ParkingCard({ parking }: ParkingCardProps) {
             )}
           </div>
         </div>
-
         {/* 詳細情報 */}
         <div className="p-5">
           <div className="mb-2 flex items-center gap-2">
@@ -54,43 +59,18 @@ export function ParkingCard({ parking }: ParkingCardProps) {
             {parking.name}
           </h3>
           <p className="mb-3 line-clamp-2 text-sm text-gray-600">{parking.description}</p>
-
           <div className="space-y-2 text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span>{parking.station}</span>
+              <span>📍</span>
+              <span>{parking.address}</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
-                />
-              </svg>
-              <span>収容台数: {parking.capacity}台</span>
+              <span>💰</span>
+              <span>{parking.hourlyRate}</span>
             </div>
-          </div>
-
-          <div className="mt-4 pt-4 border-t border-gray-100">
-            <div className="flex items-baseline justify-between">
-              <div>
-                <div className="text-xs text-gray-500">時間料金</div>
-                <div className="font-semibold text-gray-900">{parking.pricePerHour}</div>
-              </div>
-              <div className="text-right">
-                <div className="text-xs text-gray-500">最大料金</div>
-                <div className="font-semibold text-blue-900">{parking.pricePerDay.substring(0, 10)}...</div>
-              </div>
+            <div className="flex items-center gap-2">
+              <span>🚗</span>
+              <span>{parking.capacity}台</span>
             </div>
           </div>
         </div>
