@@ -1,0 +1,4 @@
+:HL["/arrow-parking/_next/static/chunks/f32b53250bd15632.css","style"]
+:HL["/arrow-parking/_next/static/chunks/a66c9eb67111edb4.css","style"]
+:HL["/logo.png","image"]
+0:{"buildId":"2zqOs9163x0ET3dVPzccS","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

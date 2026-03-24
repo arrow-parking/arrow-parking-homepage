@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Building2, Camera, Sparkles, Users, Phone, Mail, CheckCircle } from "lucide-react";
+import parkingsData from "@/data/parkings.json";
+import type { Parking } from "@/app/types/parking";
+
+const parkings = parkingsData as Parking[];
 
 export const metadata: Metadata = {
   title: "駐車場貸切プラン | アローパーキング宇田川",
   description: "渋谷エリア最大級196台収容。ポップアップストア、CM撮影、新商品発表会など、様々な用途に対応した駐車場貸切プラン。",
   keywords: ["駐車場貸切", "イベントスペース", "渋谷", "撮影", "展示会"],
 };
+
+export function generateStaticParams() {
+  return parkings.map((parking) => ({
+    id: parking.id.toString(),
+  }));
+}
 
 export default function EventsPage() {
   const useCases = [

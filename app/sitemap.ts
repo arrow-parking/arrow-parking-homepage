@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import parkingsData from "@/data/parkings.json";
 import type { Parking } from "./types/parking";
 
+export const dynamic = "force-static";
+
 const parkings = parkingsData as Parking[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
