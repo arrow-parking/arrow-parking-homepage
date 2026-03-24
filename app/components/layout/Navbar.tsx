@@ -8,6 +8,7 @@ import Image from "next/image";
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   const navItems = [
     { href: "/", label: "ホーム" },
@@ -18,7 +19,7 @@ export function Navbar() {
   ];
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
+    if (href === "/") return pathname === "/" || pathname === `${basePath}/`;
     return pathname.startsWith(href);
   };
 
@@ -29,7 +30,7 @@ export function Navbar() {
           {/* ロゴ */}
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
             <Image
-              src="/logo.png"
+              src={`${basePath}/logo.png`}
               alt="Arrow Parking Logo"
               width={40}
               height={40}
@@ -59,7 +60,7 @@ export function Navbar() {
                 )}
               </Link>
             ))}
-            <a
+            
               href="tel:03-5428-6822"
               className="rounded-lg bg-blue-900 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-blue-800 hover:shadow-lg"
             >
@@ -108,7 +109,7 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <a
+            
               href="tel:03-5428-6822"
               className="block rounded-lg bg-blue-900 px-3 py-2 text-center text-base font-semibold text-white"
             >
