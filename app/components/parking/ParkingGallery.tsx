@@ -11,12 +11,13 @@ interface ParkingGalleryProps {
 
 export default function ParkingGallery({ name, images }: ParkingGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   if (!images || images.length === 0) {
     return <div className="text-gray-500">画像がありません</div>;
   }
 
-  const currentImage = images[currentIndex];
+  const currentImage = `${basePath}${images[currentIndex]}`;
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -38,12 +39,7 @@ export default function ParkingGallery({ name, images }: ParkingGalleryProps) {
           alt={`${name} - 画像 ${currentIndex + 1}`}
           fill
           className="object-cover"
-          onError={(e) => {
-            console.error(`Failed to load image: ${currentImage}`);
-          }}
-          onLoad={() => {
-            console.log(`Loaded image: ${currentImage}`);
-          }}
+          priority
         />
       </div>
 
