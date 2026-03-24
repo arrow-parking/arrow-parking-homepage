@@ -66,7 +66,7 @@ export function ParkingCard({ parking }: ParkingCardProps) {
             </div>
             <div className="flex items-center gap-2">
               <span>💰</span>
-              <span>{parking.hourlyRate}</span>
+              <span>{parking.pricePerHour}</span>
             </div>
             <div className="flex items-center gap-2">
               <span>🚗</span>
