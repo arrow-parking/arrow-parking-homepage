@@ -18,7 +18,8 @@ export async function generateMetadata({
 }: {
   params: { id: string };
 }): Promise<Metadata> {
-  const parking = parkings.find((p) => p.id === parseInt(params.id));
+  const parkingId = parseInt(params.id, 10);
+  const parking = parkings.find((p) => p.id === parkingId);
 
   if (!parking) {
     return {
@@ -65,7 +66,8 @@ export async function generateMetadata({
 }
 
 export default function ParkingPage({ params }: { params: { id: string } }) {
-  const parking = parkings.find((p) => p.id === parseInt(params.id));
+  const parkingId = parseInt(params.id, 10);
+  const parking = parkings.find((p) => p.id === parkingId);
 
   if (!parking) {
     return (
@@ -74,6 +76,7 @@ export default function ParkingPage({ params }: { params: { id: string } }) {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             駐車場が見つかりません
           </h1>
+          <p className="text-gray-600 mb-4">ID: {parkingId}</p>
           <Link href="/parkings" className="text-blue-600 hover:underline">
             駐車場一覧に戻る
           </Link>
