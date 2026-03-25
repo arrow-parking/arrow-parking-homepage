@@ -9,16 +9,17 @@ const parkings = parkingsData as Parking[];
 
 export function generateStaticParams() {
   return parkings.map((parking) => ({
-    id: parking.id.toString(),
+    id: String(parking.id),
   }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const parkingId = parseInt(params.id, 10);
+  const { id } = await params;
+  const parkingId = parseInt(id, 10);
   const parking = parkings.find((p) => p.id === parkingId);
 
   if (!parking) {
@@ -65,8 +66,12 @@ export async function generateMetadata({
   };
 }
 
-export default function ParkingPage({ params }: { params: { id: string } }) {
-  const parkingId = parseInt(params.id, 10);
+export default function ParkingPage(props: {
+  params: Promise<{ id: string }>;
+}) {
+  const params = require("react").use(props.params);
+  const id = params.id;
+  const parkingId = parseInt(id, 10);
   const parking = parkings.find((p) => p.id === parkingId);
 
   if (!parking) {
@@ -76,7 +81,7 @@ export default function ParkingPage({ params }: { params: { id: string } }) {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             駐車場が見つかりません
           </h1>
-          <p className="text-gray-600 mb-4">ID: {parkingId}</p>
+          <p className="text-gray-600 mb-4">ID: {parkingId} / Param: {id}</p>
           <Link href="/parkings" className="text-blue-600 hover:underline">
             駐車場一覧に戻る
           </Link>
