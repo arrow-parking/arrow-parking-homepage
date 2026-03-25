@@ -211,6 +211,19 @@ export default function ParkingPage(props: {
               </div>
             </section>
 
+            {parking.priceDetail && (
+              <section className="mb-8">
+                <h2 className="mb-4 text-2xl font-bold text-gray-900">
+                  料金詳細
+                </h2>
+                <div className="rounded-lg bg-blue-50 p-6 border-l-4 border-blue-600">
+                  <p className="text-sm text-gray-800 whitespace-pre-line font-mono leading-relaxed">
+                    {parking.priceDetail}
+                  </p>
+                </div>
+              </section>
+            )}
+
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
                 説明
