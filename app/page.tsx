@@ -6,8 +6,8 @@ import type { Parking } from "./types/parking";
 const parkings = parkingsData as Parking[];
 
 export const metadata: Metadata = {
-  title: "ホーム",
-  description: "東京・大阪・宮城で24箇所、370台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・クレジットカード対応。",
+  title: "アローパーキング | コインパーキング・時間貸駐車場 | 東京・大阪・宮城",
+  description: "アローパーキングは東京・大阪・宮城で24箇所・370台のコインパーキングを運営。30年以上の実績。24時間営業・クレジットカード対応。駐車場をお探しの方はこちら。",
   openGraph: {
     title: "アローパーキング | 安心と信頼の駐車場運営",
     description: "東京・大阪・宮城で24箇所、370台の駐車場を運営。30年以上の実績。",
