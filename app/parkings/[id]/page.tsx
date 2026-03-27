@@ -19,7 +19,8 @@ export async function generateMetadata({
 }: {
   params: { id: string };
 }): Promise<Metadata> {
-  const parking = parkings.find((p) => p.id === parseInt(params.id));
+  const { id } = await params;
+  const parking = parkings.find((p) => p.id === parseInt(id));
 
   if (!parking) {
     return {
@@ -65,8 +66,9 @@ export async function generateMetadata({
   };
 }
 
-export default function ParkingPage({ params }: { params: { id: string } }) {
-  const parking = parkings.find((p) => p.id === parseInt(params.id));
+export default async function ParkingPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const parking = parkings.find((p) => p.id === parseInt(id));
 
   if (!parking) {
     return (
