@@ -162,9 +162,17 @@ export default function UdagawaPage() {
                 <Calendar className="w-8 h-8 text-blue-900" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">オンライン予約</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 mb-4">
                 事前予約で確実に駐車スペースを確保。イベント時も安心です。
               </p>
+              <a
+                href="https://select-type.com/rsv/?id=2ZeHG-XNULI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-blue-900 px-6 py-3 font-bold text-white transition-all hover:bg-blue-800 hover:shadow-lg"
+              >
+                今すぐ予約する →
+              </a>
             </div>
           </div>
 
