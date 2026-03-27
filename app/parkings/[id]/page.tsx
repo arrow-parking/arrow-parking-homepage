@@ -175,6 +175,23 @@ export default async function ParkingPage({ params }: { params: Promise<{ id: st
               </p>
             </section>
 
+            <section className="mb-8">
+              <h2 className="mb-4 text-2xl font-bold text-gray-900">
+                地図
+              </h2>
+              <div className="rounded-lg overflow-hidden h-64 bg-gray-200">
+                <iframe
+                  src={`https://maps.google.com/maps?q=${parking.latitude},${parking.longitude}&hl=ja&z=16&output=embed`}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`${parking.name}の地図`}
+                />
+              </div>
+            </section>
             {parking.features && parking.features.length > 0 && (
               <section className="mb-8">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">
