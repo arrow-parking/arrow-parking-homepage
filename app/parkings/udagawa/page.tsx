@@ -275,6 +275,19 @@ export default function UdagawaPage() {
         </div>
       </div>
 
+      {/* 予約ボタン */}
+      <div className="py-10 text-center bg-blue-50">
+        <p className="mb-4 text-lg text-gray-700">事前予約で確実に駐車スペースを確保できます</p>
+        <a
+        　href="https://select-type.com/rsv/?id=2ZeHG-XNULI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-full bg-blue-900 px-10 py-4 text-lg font-bold text-white transition-all hover:bg-blue-800 hover:shadow-xl"
+        >
+          📅 今すぐ予約する
+        </a>
+      </div>
+
       {/* CTA */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
