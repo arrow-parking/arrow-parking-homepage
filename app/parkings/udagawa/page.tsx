@@ -53,12 +53,12 @@ export default function UdagawaPage() {
                 >
                   イベント情報を見る
                 </Link>
-                <a
+                
                   href="https://select-type.com/rsv/?id=2ZeHG-XNULI"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors"
-                >
+                <a>
                   📅 今すぐ予約する
                 </a>
               </div>
