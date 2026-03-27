@@ -25,25 +25,25 @@ export default function EventsPage() {
       icon: Building2,
       title: "ポップアップストア・展示会",
       description: "期間限定ショップや商品展示会の会場として。渋谷駅から徒歩7分の好立地でお客様を迎えられます。",
-      image: "/images/parkings/udagawa-1.jpg"
+      image: "/images/parkings/udagawa-events-1.jpg"
     },
     {
       icon: Camera,
       title: "CM・映画撮影",
       description: "広々とした空間を活かした撮影ロケーション。24時間対応で、夜間・早朝の撮影も可能です。",
-      image: "/images/parkings/udagawa-2.jpg"
+      image: "/images/parkings/udagawa-events-2.jpg"
     },
     {
       icon: Sparkles,
       title: "新商品発表会",
       description: "新商品のお披露目やプレスイベントに。196台収容の大規模スペースで印象的な演出が可能です。",
-      image: "/images/parkings/udagawa-3.jpg"
+      image: "/images/parkings/udagawa-events-3.jpg"
     },
     {
       icon: Users,
       title: "プライベートイベント",
       description: "企業のキックオフミーティングやプライベートパーティーなど、多様な用途にお使いいただけます。",
-      image: "/images/parkings/udagawa-1.jpg"
+      image: "/images/parkings/udagawa-events-1.jpg"
     }
   ];
 
@@ -60,7 +60,7 @@ export default function EventsPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="relative h-[500px] overflow-hidden">
         <Image
-          src="/images/parkings/udagawa-1.jpg"
+          src="/images/parkings/udagawa-events-1.jpg"
           alt="アローパーキング宇田川"
           fill
           className="object-cover"

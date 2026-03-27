@@ -33,7 +33,7 @@ export default function EventsPage() {
       icon: Users,
       title: "プライベートイベント",
       description: "企業のキックオフミーティングやプライベートパーティーなど、多様な用途にお使いいただけます。",
-      image: "/images/parkings/udagawa-events-1.jpg"
+      image: "/images/parkings/udagawa-events-4.jpg"
     }
   ];
 
