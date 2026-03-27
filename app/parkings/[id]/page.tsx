@@ -200,14 +200,6 @@ export default async function ParkingPage({ params }: { params: Promise<{ id: st
                   <Link href="/parkings/udagawa/events" className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-bold text-blue-900 hover:bg-blue-50 transition-all">
                     イベント・貸切プランを見る →
                   </Link>
-                  <a
-                    href="https://select-type.com/rsv/?id=2ZeHG-XNULI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white hover:bg-green-400 transition-all"
-                  >
-                    📅 今すぐ予約する
-                  </a>
                 </div>
               </section>
             )}
