@@ -677,7 +677,10 @@
       "駅近",
       "スマートフォン決済専用"
     ],
-    "images": [],
+    "images": [
+       "/images/parkings/itabashi-1.jpg",
+      "/images/parkings/itabashi-2.jpg"
+    ],
     "description": "板橋区役所前駅から徒歩1分。スマートフォン決済専用の駐車場です。現金でのお支払いはできません。",
     "available": true,
     "receiptPhoneNumber": "03-5428-6822",
