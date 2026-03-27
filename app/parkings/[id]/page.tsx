@@ -192,6 +192,17 @@ export default async function ParkingPage({ params }: { params: Promise<{ id: st
                 />
               </div>
             </section>
+            {parking.id === 8 && (
+              <section className="mb-8">
+                <div className="rounded-xl bg-gradient-to-r from-blue-900 to-blue-700 p-6 text-white">
+                  <h2 className="mb-2 text-xl font-bold">イベント・貸切について</h2>
+                  <p className="mb-4 text-blue-100 text-sm">渋谷エリア最大級196台。ポップアップストア・撮影・発表会など様々な用途に対応。</p>
+                  <Link href="/parkings/udagawa/events" className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-bold text-blue-900 hover:bg-blue-50 transition-all">
+                    イベント・貸切プランを見る →
+                  </Link>
+                </div>
+              </section>
+            )}
             {parking.features && parking.features.length > 0 && (
               <section className="mb-8">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">
