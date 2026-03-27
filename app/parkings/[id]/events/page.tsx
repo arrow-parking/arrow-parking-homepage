@@ -14,9 +14,12 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return parkings.map((parking) => ({
-    id: parking.id.toString(),
-  }));
+  return [
+    ...parkings.map((parking) => ({
+      id: parking.id.toString(),
+    })),
+    { id: "udagawa" },
+  ];
 }
 
 export default function EventsPage() {
