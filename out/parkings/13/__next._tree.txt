@@ -1,4 +1,4 @@
 :HL["/_next/static/chunks/f32b53250bd15632.css","style"]
-:HL["/_next/static/chunks/e510f61474e237f7.css","style"]
+:HL["/_next/static/chunks/a6d26f9044ee5c90.css","style"]
 :HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"buildId":"NjaQcZTlLPxPGcgrn-ONm","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"parkings","paramType":null,"paramKey":"parkings","hasRuntimePrefetch":false,"slots":{"children":{"name":"id","paramType":"d","paramKey":"13","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Y2SIj1laOzjbUXihUiwXu","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"parkings","paramType":null,"paramKey":"parkings","hasRuntimePrefetch":false,"slots":{"children":{"name":"id","paramType":"d","paramKey":"13","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
