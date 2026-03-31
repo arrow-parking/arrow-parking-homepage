@@ -8,8 +8,8 @@ interface ParkingCardProps {
 }
 
 export function ParkingCard({ parking }: ParkingCardProps) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const imageUrl = `${basePath}${parking.images[0]}`;
+  
+  const imageUrl = parking.images[0];
 
   return (
     <Link href={`/parkings/${parking.id}`} className="group block">

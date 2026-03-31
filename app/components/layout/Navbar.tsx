@@ -8,7 +8,7 @@ import Image from "next/image";
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  
 
   const navItems = [
     { href: "/", label: "ホーム" },
@@ -19,7 +19,7 @@ export function Navbar() {
   ];
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/" || pathname === `${basePath}/`;
+    if (href === "/") return pathname === "/" || pathname === "/";
     return pathname.startsWith(href);
   };
 
@@ -29,7 +29,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
             <Image
-              src={`${basePath}/logo.png`}
+              src={"/logo.png"}
               alt="Arrow Parking Logo"
               width={40}
               height={40}

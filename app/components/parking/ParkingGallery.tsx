@@ -11,13 +11,13 @@ interface ParkingGalleryProps {
 
 export default function ParkingGallery({ name, images }: ParkingGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  
 
   if (!images || images.length === 0) {
     return <div className="text-gray-500">画像がありません</div>;
   }
 
-  const currentImage = `${basePath}${images[currentIndex]}`;
+  const currentImage = images[currentIndex];
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
