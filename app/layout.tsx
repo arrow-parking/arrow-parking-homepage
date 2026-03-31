@@ -12,14 +12,12 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_PATH 
-    ? `https://yama6418.github.io${process.env.NEXT_PUBLIC_BASE_PATH}` 
-    : 'http://localhost:3000'),
+  metadataBase: new URL('https://arrow-parking.com'),
   title: {
     default: "アローパーキング | 安心と信頼の駐車場運営",
     template: "%s | アローパーキング",
   },
-  description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・防犯カメラ完備・クレジットカード対応。",
+  description: "東京・大阪・宮城で24箇所、370台の駐車場を運営。30年以上の実績で安心してご利用いただけます。24時間営業・防犯カメラ完備・クレジットカード対応。",
   keywords: [
     "駐車場",
     "時間貸し駐車場",
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "アローパーキング",
     title: "アローパーキング | 安心と信頼の駐車場運営",
-    description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績で安心してご利用いただけます。",
+    description: "東京・大阪・宮城で24箇所、370台の駐車場を運営。30年以上の実績で安心してご利用いただけます。",
     images: [
       {
         url: "/logo.png",
@@ -60,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "アローパーキング | 安心と信頼の駐車場運営",
-    description: "東京・大阪・宮城で23箇所、396台の駐車場を運営。30年以上の実績。",
+    description: "東京・大阪・宮城で24箇所、370台の駐車場を運営。30年以上の実績。",
     images: ["/logo.png"],
   },
   robots: {

@@ -29,8 +29,7 @@ export async function generateMetadata({
     };
   }
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const imageUrl = `${basePath}${parking.images[0]}`;
+  const imageUrl = `https://arrow-parking.com${parking.images[0]}`;
 
   return {
     title: `${parking.name} | ${parking.city}のコインパーキング・駐車場 | アローパーキング`,

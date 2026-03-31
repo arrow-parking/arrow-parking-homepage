@@ -7,9 +7,7 @@ export const dynamic = "force-static";
 const parkings = parkingsData as Parking[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_PATH 
-    ? `https://yama6418.github.io${process.env.NEXT_PUBLIC_BASE_PATH}`
-    : 'http://localhost:3000';
+  const baseUrl = 'https://arrow-parking.com';
 
   // 静的ページ
   const staticPages: MetadataRoute.Sitemap = [
@@ -45,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // 駐車場詳細ページ（全23箇所）
+  // 駐車場詳細ページ（全24箇所）
   const parkingPages: MetadataRoute.Sitemap = parkings.map((parking) => ({
     url: `${baseUrl}/parkings/${parking.id}`,
     lastModified: new Date(),
