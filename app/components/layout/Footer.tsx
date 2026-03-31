@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 export function Footer() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   return (
     <footer className="border-t border-gray-200 bg-gray-900 text-gray-300">
@@ -12,7 +11,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="mb-4 flex items-center gap-3">
               <img 
-                src={`${basePath}/logo.png`}
+                src={"/logo.png"}
                 alt="アローパーキング ロゴ" 
                 className="h-10 w-10"
               />
