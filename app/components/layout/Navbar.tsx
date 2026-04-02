@@ -8,6 +8,7 @@ import Image from "next/image";
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   
 
   const navItems = [
@@ -29,7 +30,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
             <Image
-              src={"/logo.png"}
+              src={`${basePath}/logo.png`}
               alt="Arrow Parking Logo"
               width={40}
               height={40}
