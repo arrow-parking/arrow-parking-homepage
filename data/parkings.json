@@ -117,7 +117,7 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区阿佐谷南3-34-19",
-    "station": "阿佐ヶ谷駅徒歩7分",
+    "station": "阿佐ヶ谷駅徒歩1分",
     "capacity": 4,
     "price_per_hour": 300,
     "price_per_day": 1500,
@@ -125,7 +125,7 @@
     "pricePerDay": "最大 2,600円",
     "latitude": 35.704112813784754,
     "longitude": 139.6355939935587,
-    "description": "阿佐ヶ谷駅から徒歩7分。閑静な住宅街に位置しています。",
+    "description": "阿佐ヶ谷駅から徒歩1分。閑静な住宅街に位置しています。",
     "features": [
       "24時間営業",
       "静かな環境"
@@ -145,7 +145,7 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区井草3-9-1",
-    "station": "井荻駅徒歩5分",
+    "station": "井荻駅徒歩3分",
     "capacity": 9,
     "price_per_hour": 250,
     "price_per_day": 1200,
@@ -153,7 +153,7 @@
     "pricePerDay": "最大 1,400円",
     "latitude": 35.72490056509844,
     "longitude": 139.61707372774748,
-    "description": "井荻駅から徒歩5分。住宅街での長時間駐車に適しています。",
+    "description": "井荻駅から徒歩3分。住宅街での長時間駐車に適しています。",
     "features": [
       "24時間営業"
     ],
