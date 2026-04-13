@@ -1,0 +1,26 @@
+version: "3"
+
+tasks:
+  init:
+    internal: true
+    cmds:
+      - aqua i -l
+      - pnpm install
+
+  dev:
+    desc: Start development server
+    deps: [init]
+    cmds:
+      - pnpm dev
+
+  build:
+    desc: Build for production
+    deps: [init]
+    cmds:
+      - pnpm build
+
+  lint:
+    desc: Run ESLint
+    deps: [init]
+    cmds:
+      - pnpm lint
