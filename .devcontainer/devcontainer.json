@@ -1,0 +1,17 @@
+{
+  "name": "arrow-parking-homepage",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/aquaproj/devcontainer-features/aqua-installer:1": {}
+  },
+  "postCreateCommand": "aqua i -l && pnpm install",
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
