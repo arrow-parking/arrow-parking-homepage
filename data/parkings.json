@@ -90,7 +90,7 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区阿佐谷南3-34-17",
-    "station": "阿佐ヶ谷駅徒歩5分",
+    "station": "阿佐ヶ谷駅徒歩2分",
     "capacity": 8,
     "price_per_hour": 300,
     "price_per_day": 1800,
@@ -98,7 +98,7 @@
     "pricePerDay": "最大 2,600円",
     "latitude": 35.704128539355594,
     "longitude": 139.63542481162588,
-    "description": "阿佐ヶ谷駅から徒歩5分。商店街でのお買い物に便利です。",
+    "description": "阿佐ヶ谷駅から徒歩2分。商店街でのお買い物に便利です。",
     "features": [
       "24時間営業",
       "商店街近く"
