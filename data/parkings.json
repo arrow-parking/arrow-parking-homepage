@@ -33,7 +33,7 @@
     "prefecture": "東京都",
     "city": "世田谷区",
     "address": "東京都世田谷区赤堤4-12-13",
-    "station": "下高井戸駅徒歩8分",
+    "station": "下高井戸駅徒歩9分",
     "capacity": 3,
     "price_per_hour": 300,
     "price_per_day": 1500,
@@ -41,7 +41,7 @@
     "pricePerDay": "最大 1,500円",
     "latitude": 35.66243090063705,
     "longitude": 139.64123472454992,
-    "description": "下高井戸駅から徒歩8分。住宅街での駐車に適しています。",
+    "description": "下高井戸駅から徒歩9分。住宅街での駐車に適しています。",
     "features": [
       "24時間営業"
     ],
@@ -62,7 +62,7 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区阿佐谷北1-8-12",
-    "station": "阿佐ヶ谷駅徒歩3分",
+    "station": "阿佐ヶ谷駅徒歩5分",
     "capacity": 4,
     "price_per_hour": 300,
     "price_per_day": 1800,
@@ -70,7 +70,7 @@
     "pricePerDay": "最大 3,000円",
     "latitude": 35.70667545938085,
     "longitude": 139.63938538954628,
-    "description": "阿佐ヶ谷駅から徒歩3分。駅近の便利な立地です。",
+    "description": "阿佐ヶ谷駅から徒歩5分。駅近の便利な立地です。",
     "features": [
       "24時間営業",
       "駅近"
