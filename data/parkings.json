@@ -281,7 +281,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-088-707",
     "receiptOfficeName": "Jシステムコールセンター",
-    "priceDetail": "【昼間】8:00~22:00 15分 100円\n【夜間】22:00~8:00 60分 100円\n※最大料金なし"
+    "priceDetail": "【昼間】8:00~22:00 15分 100円\n【夜間】22:00~8:00 60分 100円\n【最大料金】24時間最大 1,400円"
   },
   {
     "id": 11,
@@ -289,7 +289,7 @@
     "prefecture": "東京都",
     "city": "品川区",
     "address": "東京都品川区大崎5-1-5",
-    "station": "大崎駅徒歩3分",
+    "station": "大崎駅徒歩6分",
     "capacity": 11,
     "price_per_hour": 500,
     "price_per_day": 2500,
@@ -297,7 +297,7 @@
     "pricePerDay": "最大 3,200円",
     "latitude": 35.623570743985574,
     "longitude": 139.72484685400676,
-    "description": "大崎駅から徒歩3分。ビジネス街での駐車に最適です。",
+    "description": "大崎駅から徒歩6分。ビジネス街での駐車に最適です。",
     "features": [
       "24時間営業",
       "駅近",
@@ -319,15 +319,15 @@
     "prefecture": "東京都",
     "city": "世田谷区",
     "address": "東京都世田谷区成城2-33-18",
-    "station": "成城学園前駅徒歩5分",
+    "station": "成城学園前駅徒歩2分",
     "capacity": 20,
     "price_per_hour": 350,
     "price_per_day": 1800,
-    "pricePerHour": "15分 100円",
+    "pricePerHour": "10分 100円",
     "pricePerDay": "最大 1,500円",
     "latitude": 35.63915529536871,
     "longitude": 139.59847360915705,
-    "description": "成城学園前駅から徒歩5分。高級住宅街に位置しています。",
+    "description": "成城学園前駅から徒歩2分。高級住宅街に位置しています。",
     "features": [
       "24時間営業",
       "高級住宅街"
@@ -341,7 +341,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-088-707",
     "receiptOfficeName": "Jシステムコールセンター",
-    "priceDetail": "【昼間】8:00~20:00 15分 100円\n【夜間】20:00~8:00 60分 100円\n【最大料金】12時間最大 1,500円 / 夜間(20:00~8:00)最大 400円"
+    "priceDetail": "【昼間】8:00~20:00 10分 100円\n【夜間】20:00~8:00 60分 100円\n【最大料金】12時間最大 1,500円 / 夜間(20:00~8:00)最大 400円"
   },
   {
     "id": 13,
@@ -349,15 +349,15 @@
     "prefecture": "東京都",
     "city": "中野区",
     "address": "東京都中野区本町2-2-1",
-    "station": "中野新橋駅徒歩5分",
+    "station": "中野新橋駅徒歩11分",
     "capacity": 5,
-    "price_per_hour": 300,
-    "price_per_day": 1500,
-    "pricePerHour": "30分 150円",
-    "pricePerDay": "最大 1,500円",
+    "price_per_hour": 200,
+    "price_per_day": 2400,
+    "pricePerHour": "20分 200円",
+    "pricePerDay": "最大 2,400円",
     "latitude": 35.69276890225619,
     "longitude": 139.68178784108383,
-    "description": "中野新橋駅から徒歩5分。住宅街での長時間駐車に便利です。",
+    "description": "中野新橋駅から徒歩11分。住宅街での長時間駐車に便利です。",
     "features": [
       "24時間営業"
     ],
@@ -369,7 +369,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-163-110",
     "receiptOfficeName": "パーサーコールセンター",
-    "priceDetail": "30分 150円\n24時間最大 1,500円"
+    "priceDetail": "【昼間】8:00~24:00 20分 200円\n【夜間】24:00~8:00 60分 100円\n【最大料金】24時間最大 2,400円"
   },
   {
     "id": 14,
@@ -377,7 +377,7 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区成田東5-29-3",
-    "station": "南阿佐ヶ谷駅徒歩8分",
+    "station": "南阿佐ヶ谷駅徒歩6分",
     "capacity": 7,
     "price_per_hour": 250,
     "price_per_day": 1200,
@@ -385,7 +385,7 @@
     "pricePerDay": "最大 2,000円",
     "latitude": 35.697751719091464,
     "longitude": 139.63186956362506,
-    "description": "南阿佐ヶ谷駅から徒歩8分。閑静な住宅街に位置しています。",
+    "description": "南阿佐ヶ谷駅から徒歩6分。閑静な住宅街に位置しています。",
     "features": [
       "24時間営業",
       "静かな環境"
@@ -407,7 +407,7 @@
     "prefecture": "東京都",
     "city": "中央区",
     "address": "東京都中央区日本橋浜町1-1-5",
-    "station": "浜町駅徒歩3分",
+    "station": "浜町駅徒歩4分",
     "capacity": 9,
     "price_per_hour": 500,
     "price_per_day": 2500,
@@ -415,7 +415,7 @@
     "pricePerDay": "最大 3,800円",
     "latitude": 35.68937748726621,
     "longitude": 139.78583272006807,
-    "description": "浜町駅から徒歩3分。ビジネス・観光に便利な立地です。",
+    "description": "浜町駅から徒歩4分。ビジネス・観光に便利な立地です。",
     "features": [
       "24時間営業",
       "駅近",
@@ -437,7 +437,7 @@
     "prefecture": "東京都",
     "city": "新宿区",
     "address": "東京都新宿区百人町2-3-20",
-    "station": "新大久保駅徒歩5分",
+    "station": "新大久保駅徒歩2分",
     "capacity": 7,
     "price_per_hour": 400,
     "price_per_day": 2000,
@@ -445,7 +445,7 @@
     "pricePerDay": "最大料金なし",
     "latitude": 35.701772663282036,
     "longitude": 139.70070969032474,
-    "description": "新大久保駅から徒歩5分。コリアタウン・観光エリアでのご利用に便利です。",
+    "description": "新大久保駅から徒歩2分。コリアタウン・観光エリアでのご利用に便利です。",
     "features": [
       "防犯カメラ"
     ],
@@ -456,7 +456,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-088-707",
     "receiptOfficeName": "Jシステムコールセンター",
-    "priceDetail": "※現在休業中\n\n【月～金】\n【昼間】8:00~24:00 15分 300円\n【夜間】24:00~8:00 60分 200円\n\n【土日祝】\n【昼間】8:00~24:00 10分 400円\n【夜間】24:00~8:00 60分 200円"
+    "priceDetail": "\n\n【月～金】\n【昼間】8:00~24:00 15分 300円\n【夜間】24:00~8:00 60分 200円\n\n【土日祝】\n【昼間】8:00~24:00 10分 400円\n【夜間】24:00~8:00 60分 200円"
   },
   {
     "id": 17,
@@ -464,7 +464,7 @@
     "prefecture": "東京都",
     "city": "世田谷区",
     "address": "東京都世田谷区玉川4-7-5",
-    "station": "二子玉川駅徒歩5分",
+    "station": "二子玉川駅徒歩8分",
     "capacity": 3,
     "price_per_hour": 400,
     "price_per_day": 2000,
@@ -472,7 +472,7 @@
     "pricePerDay": "最大 1,700円",
     "latitude": 35.616871331703216,
     "longitude": 139.62580673622747,
-    "description": "二子玉川駅から徒歩5分。ショッピングに便利な立地です。",
+    "description": "二子玉川駅から徒歩8分。ショッピングに便利な立地です。",
     "features": [
       "24時間営業",
       "駅近",
@@ -494,7 +494,7 @@
     "prefecture": "東京都",
     "city": "新宿区",
     "address": "東京都新宿区馬場下町63",
-    "station": "早稲田駅徒歩3分",
+    "station": "早稲田駅徒歩1分",
     "capacity": 10,
     "price_per_hour": 400,
     "price_per_day": 2000,
@@ -502,7 +502,7 @@
     "pricePerDay": "最大 2,500円",
     "latitude": 35.70637052378198,
     "longitude": 139.7207031437054,
-    "description": "早稲田駅から徒歩3分。大学・商店街でのご利用に便利です。",
+    "description": "早稲田駅から徒歩1分。大学・商店街でのご利用に便利です。",
     "features": [
       "24時間営業",
       "駅近"
@@ -514,7 +514,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-088-707",
     "receiptOfficeName": "Jシステムコールセンター",
-    "priceDetail": "【昼間】8:00~20:00 20分 200円\n【夜間】20:00~8:00 60分 100円\n【最大料金】24時間最大 2,500円 / 夜間(20:00~8:00)最大 400円"
+    "priceDetail": "【昼間】8:00~20:00 20分 200円\n【夜間】20:00~8:00 60分 100円\n【最大料金】昼間(8:00~20:00)最大 2,500円 / 夜間(20:00~8:00)最大 400円"
   },
   {
     "id": 19,
@@ -522,7 +522,7 @@
     "prefecture": "東京都",
     "city": "北区",
     "address": "東京都北区赤羽北1-25-39",
-    "station": "赤羽駅徒歩8分",
+    "station": "赤羽駅徒歩16分",
     "capacity": 4,
     "price_per_hour": 300,
     "price_per_day": 1500,
@@ -530,7 +530,7 @@
     "pricePerDay": "最大 1,400円",
     "latitude": 35.78661685632897,
     "longitude": 139.71642964302004,
-    "description": "赤羽駅から徒歩8分。住宅街での駐車に適しています。",
+    "description": "赤羽駅から徒歩16分。住宅街での駐車に適しています。",
     "features": [
       "24時間営業"
     ],
@@ -580,7 +580,7 @@
     "prefecture": "大阪府",
     "city": "大阪市浪速区",
     "address": "大阪府大阪市北区浪花町12-14",
-    "station": "難波駅徒歩5分",
+    "station": "天神橋筋六丁目駅徒歩1分",
     "capacity": 2,
     "price_per_hour": 400,
     "price_per_day": 2000,
@@ -588,7 +588,7 @@
     "pricePerDay": "最大料金なし",
     "latitude": 34.70875775860443,
     "longitude": 135.5095883451186,
-    "description": "難波駅から徒歩5分。大阪観光・ショッピングに最適です。",
+    "description": "天神橋筋六丁目駅(13番出口)から徒歩1分。大阪観光・ショッピングに最適です。",
     "features": [
       "24時間営業",
       "駅近",
@@ -609,7 +609,7 @@
     "prefecture": "大阪府",
     "city": "大阪市天王寺区",
     "address": "大阪府大阪市天王寺区生玉6番",
-    "station": "谷町九丁目駅徒歩5分",
+    "station": "谷町九丁目駅徒歩3分",
     "capacity": 3,
     "price_per_hour": 350,
     "price_per_day": 1800,
@@ -617,7 +617,7 @@
     "pricePerDay": "最大料金なし",
     "latitude": 34.6649051985584,
     "longitude": 135.51444486742793,
-    "description": "谷町九丁目駅から徒歩5分。生玉神社参拝に便利です。",
+    "description": "谷町九丁目駅から徒歩3分。生玉神社参拝に便利です。",
     "features": [
       "24時間営業",
       "神社近く"
@@ -637,7 +637,7 @@
     "prefecture": "兵庫県",
     "city": "尼崎市",
     "address": "兵庫県尼崎市東難波町5-1",
-    "station": "尼崎駅徒歩8分",
+    "station": "尼崎駅徒歩15分",
     "capacity": 11,
     "price_per_hour": 300,
     "price_per_day": 1500,
@@ -645,7 +645,7 @@
     "pricePerDay": "最大 900円",
     "latitude": 34.72342597560821,
     "longitude": 135.40953378219362,
-    "description": "尼崎駅から徒歩8分。阪神エリアでの駐車に便利です。",
+    "description": "尼崎駅から徒歩15分。阪神エリアでの駐車に便利です。",
     "features": [
       "24時間営業"
     ],
@@ -656,7 +656,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-890-989",
     "receiptOfficeName": "日本駐車場メンテナンス株式会社",
-    "priceDetail": "30分 150円\n24時間最大 1,500円"
+    "priceDetail": "【昼間】9:00~22:00 30分 100円\n【夜間】22:00~9:00 60分 100円\n24時間最大 1,500円"
   },
   {
     "id": 24,
