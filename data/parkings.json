@@ -234,7 +234,7 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区永福2-51-1",
-    "station": "永福町駅徒歩5分",
+    "station": "永福町駅徒歩2分",
     "capacity": 5,
     "price_per_hour": 300,
     "price_per_day": 1500,
@@ -242,7 +242,7 @@
     "pricePerDay": "最大 1,400円",
     "latitude": 35.675250160510345,
     "longitude": 139.64322639902758,
-    "description": "永福町駅から徒歩5分。商店街でのお買い物に便利です。",
+    "description": "永福町駅から徒歩2分。商店街でのお買い物に便利です。",
     "features": [
       "24時間営業",
       "商店街近く"
@@ -263,15 +263,15 @@
     "prefecture": "東京都",
     "city": "杉並区",
     "address": "東京都杉並区永福4-4-16",
-    "station": "永福町駅徒歩8分",
+    "station": "永福町駅徒歩2分",
     "capacity": 6,
     "price_per_hour": 300,
     "price_per_day": 1500,
-    "pricePerHour": "15分 200円",
+    "pricePerHour": "15分 100円",
     "pricePerDay": "最大 1,400円",
     "latitude": 35.67704488294827,
     "longitude": 139.64323744109808,
-    "description": "永福町駅から徒歩8分。閑静な住宅街に位置しています。",
+    "description": "永福町駅から徒歩2分。閑静な住宅街に位置しています。",
     "features": [
       "24時間営業"
     ],
@@ -281,7 +281,7 @@
     "available": true,
     "receiptPhoneNumber": "0120-088-707",
     "receiptOfficeName": "Jシステムコールセンター",
-    "priceDetail": "【昼間】8:00~22:00 15分 200円\n【夜間】22:00~8:00 60分 100円\n【最大料金】24時間最大 1,400円"
+    "priceDetail": "【昼間】8:00~22:00 15分 100円\n【夜間】22:00~8:00 60分 100円\n※最大料金なし"
   },
   {
     "id": 11,
