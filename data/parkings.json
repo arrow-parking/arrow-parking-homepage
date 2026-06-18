@@ -432,33 +432,6 @@
     "priceDetail": "【月～土】\n【昼間】7:00~20:00 15分 200円\n【夜間】20:00~7:00 60分 100円\n【最大料金】24時間最大 3,800円 / 夜間(20:00~8:00)最大 300円\n\n【日祝】\n【昼間】8:00~20:00 最大 1,200円"
   },
   {
-    "id": 16,
-    "name": "百人町第一駐車場",
-    "prefecture": "東京都",
-    "city": "新宿区",
-    "address": "東京都新宿区百人町2-3-20",
-    "station": "新大久保駅徒歩2分",
-    "capacity": 7,
-    "price_per_hour": 400,
-    "price_per_day": 2000,
-    "pricePerHour": "15分 300円（月～金）/ 10分 400円（土日祝）",
-    "pricePerDay": "最大料金なし",
-    "latitude": 35.701772663282036,
-    "longitude": 139.70070969032474,
-    "description": "新大久保駅から徒歩2分。コリアタウン・観光エリアでのご利用に便利です。6/14営業終了。",
-    "features": [
-      "防犯カメラ"
-    ],
-    "images": [
-      "/images/parkings/hyakunincho-1.jpg",
-      "/images/parkings/hyakunincho-2.jpg"
-    ],
-    "available": false,
-    "receiptPhoneNumber": "0120-088-707",
-    "receiptOfficeName": "Jシステムコールセンター",
-    "priceDetail": "\n\n【月～金】\n【昼間】8:00~24:00 15分 300円\n【夜間】24:00~8:00 60分 200円\n\n【土日祝】\n【昼間】8:00~24:00 10分 400円\n【夜間】24:00~8:00 60分 200円"
-  },
-  {
     "id": 17,
     "name": "玉川駐車場",
     "prefecture": "東京都",
