@@ -20,7 +20,7 @@ export async function generateMetadata({
   params: { id: string };
 }): Promise<Metadata> {
   const { id } = await params;
-  const parking = parkings.find((p) => p.id === parseInt(id));
+  const parking = parkings.find((p) => p.id === id);
 
   if (!parking) {
     return {
@@ -67,7 +67,7 @@ export async function generateMetadata({
 
 export default async function ParkingPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const parking = parkings.find((p) => p.id === parseInt(id));
+  const parking = parkings.find((p) => p.id === id);
 
   if (!parking) {
     return (
@@ -191,7 +191,7 @@ export default async function ParkingPage({ params }: { params: Promise<{ id: st
                 />
               </div>
             </section>
-            {parking.id === 8 && (
+            {parking.id === "udagawa" && (
               <section className="mb-8">
                 <div className="rounded-xl bg-gradient-to-r from-blue-900 to-blue-700 p-6 text-white">
                   <h2 className="mb-2 text-xl font-bold">イベント・貸切について</h2>

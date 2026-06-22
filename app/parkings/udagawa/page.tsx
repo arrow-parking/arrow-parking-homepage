@@ -5,7 +5,7 @@ import parkingsData from "@/data/parkings.json";
 import type { Parking } from "@/app/types/parking";
 
 const parkings = parkingsData as Parking[];
-const udagawaParking = parkings.find((p) => p.id === 8);
+const udagawaParking = parkings.find((p) => p.id === "udagawacho");
 
 export const metadata: Metadata = {
   title: "アローパーキング宇田川 | 渋谷エリア最大級196台収容",
@@ -93,12 +93,12 @@ export default function UdagawaPage() {
             <h3 className="text-xl font-semibold text-gray-900 mb-6">通常料金</h3>
             <div className="space-y-4">
               <div className="flex justify-between items-center py-3 border-b">
-                <span className="text-gray-700">8:00〜20:00</span>
-                <span className="text-2xl font-bold text-blue-900">¥400<span className="text-sm font-normal text-gray-600">/30分</span></span>
+                <span className="text-gray-700">時間料金 (月～金)</span>
+                <span className="text-2xl font-bold text-blue-900">¥180<span className="text-sm font-normal text-gray-600">/15分</span></span>
               </div>
               <div className="flex justify-between items-center py-3 border-b">
-                <span className="text-gray-700">20:00〜8:00</span>
-                <span className="text-2xl font-bold text-blue-900">¥100<span className="text-sm font-normal text-gray-600">/60分</span></span>
+                <span className="text-gray-700">時間料金(土日祝)</span>
+                <span className="text-2xl font-bold text-blue-900">¥250<span className="text-sm font-normal text-gray-600">/15分</span></span>
               </div>
             </div>
           </div>
