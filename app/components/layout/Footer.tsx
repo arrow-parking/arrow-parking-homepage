@@ -26,7 +26,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-gray-400">
               <p>📍 〒154-0041 東京都渋谷区神南1-20-15 神南101ビル5階</p>
               <p>📞 03-5428-6822</p>
-              <p>⏰ 平日 9:30〜17:30</p>
+              <p>⏰ 平日 9:30〜17:30 （夏季・冬季休暇を除く）</p>
             </div>
           </div>
 

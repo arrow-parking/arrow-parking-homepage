@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
-  description: "アローパーキングへのお問い合わせ。駐車場の空き状況、月極契約、土地活用など、お気軽にご相談ください。電話：03-5428-6822（平日9:30〜17:30）",
+  description: "アローパーキングへのお問い合わせ。駐車場の空き状況、月極契約、土地活用など、お気軽にご相談ください。電話：03-5428-6822（平日9:30〜17:30　夏季・冬季休暇を除く）",
   keywords: ["お問い合わせ", "連絡先", "電話番号", "相談"],
   openGraph: {
     title: "お問い合わせ | アローパーキング",
@@ -45,7 +45,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="mb-2 text-sm text-gray-600">営業時間</div>
-                  <div className="text-gray-900">平日 9:30〜17:30</div>
+                  <div className="text-gray-900">平日 9:30〜17:30（夏季・冬季休暇を除く）</div>
                 </div>
               </div>
             </div>
