@@ -76,8 +76,9 @@
       "駅近"
     ],
     "images": [
-      "/images/parkings/asagaya1-1.jpg",
-      "/images/parkings/asagaya1-2.jpg"
+      "/images/parkings/asagaya1-2.jpg",
+      "/images/parkings/asagaya1-1.jpg"
+      
     ],
     "available": true,
     "receiptPhoneNumber": "0120-088-707",
@@ -158,8 +159,8 @@
       "24時間営業"
     ],
     "images": [
-      "/images/parkings/iogi-1.jpg",
       "/images/parkings/iogi-2.jpg",
+      "/images/parkings/iogi-1.jpg",
       "/images/parkings/iogi-3.jpg",
       "/images/parkings/iogi-4.jpg"
     ],
@@ -452,8 +453,8 @@
       "商業施設近く"
     ],
     "images": [
-      "/images/parkings/tamagawa-1.jpg",
       "/images/parkings/tamagawa-2.jpg",
+      "/images/parkings/tamagawa-1.jpg",
       "/images/parkings/tamagawa-3.jpg"
     ],
     "available": true,
