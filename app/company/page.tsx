@@ -65,7 +65,7 @@ export default function CompanyPage() {
             </div>
             <div className="flex border-b border-gray-100 pb-4">
               <dt className="w-32 flex-shrink-0 font-semibold text-gray-900">営業時間</dt>
-              <dd className="text-gray-600">平日 9:30〜17:30</dd>
+              <dd className="text-gray-600">平日 9:30〜17:30（夏季・冬季休暇を除く）</dd>
             </div>
             <div className="flex pb-4">
               <dt className="w-32 flex-shrink-0 font-semibold text-gray-900">事業内容</dt>
