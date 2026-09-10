@@ -631,34 +631,6 @@
     "receiptPhoneNumber": "0120-890-989",
     "receiptOfficeName": "日本駐車場メンテナンス株式会社",
     "priceDetail": "【昼間】9:00~22:00 30分 100円\n【夜間】22:00~9:00 60分 100円\n※最大料金なし"
-  },
-  {
-    "id": "itabashi",
-    "name": "板橋駐車場",
-    "prefecture": "東京都",
-    "city": "板橋区",
-    "address": "東京都板橋区板橋2-61",
-    "station": "板橋区役所前駅徒歩1分",
-    "capacity": 6,
-    "price_per_hour": 200,
-    "price_per_day": 1600,
-    "pricePerHour": "30分 200円",
-    "pricePerDay": "12時間最大 1,600円",
-    "latitude": 35.75115167314754,
-    "longitude": 139.7099750602574,
-    "features": [
-      "24時間営業",
-      "駅近",
-      "スマートフォン決済専用"
-    ],
-    "images": [
-      "/images/parkings/itabashi-1.jpg",
-      "/images/parkings/itabashi-2.jpg"
-    ],
-    "description": "板橋区役所前駅から徒歩1分。スマートフォン決済専用の駐車場です。現金でのお支払いはできません。",
-    "available": true,
-    "receiptPhoneNumber": "03-5428-6822",
-    "receiptOfficeName": "株式会社アローパーキング",
-    "priceDetail": "全日 00:00～24:00 30分 200円\n12時間最大 1,600円（48時間まで）\n夜間(18:00～8:00)最大 500円\n※スマートフォン精算専用（現金・クレジットカード等不可）"
   }
+
 ]
