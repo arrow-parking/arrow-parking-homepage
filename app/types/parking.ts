@@ -20,6 +20,7 @@ export interface Parking {
   receiptPhoneNumber?: string;
   receiptOfficeName?: string;
   priceDetail?: string;
+  notice?: string;
 }
 
 
