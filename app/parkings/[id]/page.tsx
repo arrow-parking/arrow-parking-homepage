@@ -118,6 +118,16 @@ export default async function ParkingPage({ params }: { params: Promise<{ id: st
         {/* 詳細情報 */}
         <div className="grid gap-8 md:grid-cols-3">
           <div className="md:col-span-2">
+            {parking.notice && (
+  <section className="mb-8">
+    <div className="rounded-xl border-l-8 border-red-500 bg-red-50 p-6">
+      <h2 className="mb-2 text-xl font-bold text-red-700">
+        ⚠️ ご利用前にご確認ください
+      </h2>
+      <p className="whitespace-pre-line text-red-900">{parking.notice}</p>
+    </div>
+  </section>
+)}
             <section className="mb-8">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
                 駐車場情報
