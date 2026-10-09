@@ -74,7 +74,7 @@ export default function EventsPage() {
         
         <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <Link
-            href="/parkings/udagawa"
+            href="/parkings/udagawacho"
             className="mb-8 inline-flex items-center text-white/90 transition-colors hover:text-white"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
